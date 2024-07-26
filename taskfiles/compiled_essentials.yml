@@ -1,7 +1,7 @@
-version: '3'
+version: "3"
 
 env:
-  BASH_COMPLETION_D: "{{.HOME}}/.bash_completion.d"
+  BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
 
@@ -184,7 +184,8 @@ tasks:
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc) install
         mkdir -p {{.BASH_COMPLETION_D}}
-        cp contrib/tig-completion.bash {{.BASH_COMPLETION_D}}
+        cp contrib/tig-completion.bash {{.BASH_COMPLETION_D}}/tig
+        chmod a-x {{.BASH_COMPLETION_D}}/tig
         mkdir -p $CONFIG_DIR
         cp contrib/chocolate.theme.tigrc $CONFIG_DIR
       - |

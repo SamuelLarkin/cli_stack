@@ -1,7 +1,7 @@
 version: "3"
 
 env:
-  BASH_COMPLETION_D: "{{.HOME}}/.bash_completion.d"
+  BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
   BIN_DIR: "{{.HOME}}/.local/bin"
   # NOTE: [Environment variable used by cargo to specify the installation directory](https://doc.rust-lang.org/cargo/commands/cargo-install.html)
   CARGO_INSTALL_ROOT: "{{.HOME}}/.local"
@@ -67,7 +67,7 @@ tasks:
     cmds:
       - cargo install diffsitter --bin diffsitter
       - cargo install diffsitter --bin diffsitter_completions
-      - diffsitter gen-completion bash > {{.BASH_COMPLETION_D}}/diffsitter-completion.bash
+      - diffsitter gen-completion bash > {{.BASH_COMPLETION_D}}/diffsitter
     generates:
       - "{{.BIN_DIR}}/diffsitter"
     status:

@@ -1,7 +1,7 @@
-version: '3'
+version: "3"
 
 env:
-  BASH_COMPLETION_D: "{{.HOME}}/.bash_completion.d"
+  BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
 
@@ -18,7 +18,7 @@ tasks:
       curl \
         --create-dirs --fail --location \
         --output {{.BASH_COMPLETION_D}}/'#1' \
-        'https://raw.githubusercontent.com/damienfrancois/slurm-helper/master/{slurm_completion.sh}'
+        'https://raw.githubusercontent.com/damienfrancois/slurm-helper/master/{slurm}_completion.sh'
     generates:
       - "{{.BASH_COMPLETION_D}}/slurm_completion.sh"
     preconditions:

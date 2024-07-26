@@ -1,7 +1,8 @@
 version: "3"
 
 env:
-  BASH_COMPLETION_D: "{{.HOME}}/.bash_completion.d"
+  BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
+  BASH_RC_D: "{{.HOME}}/.bashrc.d"
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
 
@@ -48,12 +49,12 @@ tasks:
     cmd: |
       curl \
          --create-dirs --fail --location \
-         --output {{.BASH_COMPLETION_D}}/'#1' \
-         'https://raw.githubusercontent.com/junegunn/fzf-git.sh/main/{fzf-git.sh}'
+         --output {{.BASH_RC_D}}/'#1' \
+         'https://raw.githubusercontent.com/junegunn/fzf-git.sh/main/{fzf-git}.sh'
     generates:
-      - "{{.BASH_COMPLETION_D}}/fzf-git.sh"
+      - "{{.BASH_RC_D}}/fzf-git"
     status:
-      - test -f {{.BASH_COMPLETION_D}}/fzf-git.sh
+      - test -f {{.BASH_RC_D}}/fzf-git
 
   fzf-tmux:
     desc: >
@@ -76,28 +77,34 @@ tasks:
   shell_completion:
     desc: >
       Install fzf's shell completion.
+      NOTE: Set up fzf key bindings and fuzzy completion
+      eval "$(fzf --bash)"
     deps:
       - fzf
-    cmd: |
-      # BASH completions
-      curl \
-         --create-dirs --fail --location \
-         --output {{.BASH_COMPLETION_D}}/fzf-'#1' \
-         'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{completion.bash}'
-      curl \
-         --create-dirs --fail --location \
-         --output {{.BASH_COMPLETION_D}}/fzf-'#1' \
-         'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{key-bindings.bash}'
-      curl \
-         --create-dirs --fail --location \
-         --output ~/.config/fish/functions/fzf-'#1' \
-         'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{key-bindings.fish}'
+    cmds:
+      # - |
+      #   curl \
+      #     --create-dirs --fail --location \
+      #     --output {{.BASH_COMPLETION_D}}/fzf \
+      #     'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{completion.bash}'
+      # - |
+      #   curl \
+      #     --create-dirs --fail --location \
+      #     --output {{.BASH_COMPLETION_D}}/fzf-'#1' \
+      #     'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{key-bindings.bash}'
+      - |
+        curl \
+          --create-dirs --fail --location \
+          --output ~/.config/fish/functions/fzf-'#1' \
+          'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{key-bindings.fish}'
     generates:
-      - "{{.BASH_COMPLETION_D}}/fzf-completion.bash"
-      - "{{.BASH_COMPLETION_D}}/fzf-key-bindings.bash"
+      # - "{{.BASH_COMPLETION_D}}/fzf"
+      # - "{{.BASH_COMPLETION_D}}/fzf-key-bindings.bash"
+      - ~/.config/fish/functions/fzf-key-bindings.fish
     status:
-      - test -f {{.BASH_COMPLETION_D}}/fzf-completion.bash
-      - test -f {{.BASH_COMPLETION_D}}/fzf-key-bindings.bash
+      # - test -f {{.BASH_COMPLETION_D}}/fzf
+      # - test -f {{.BASH_COMPLETION_D}}/fzf-key-bindings.bash
+      - test -f ~/.config/fish/functions/fzf-key-bindings.fish
     precondition:
       - sh: "! fzf --bash"
         msg: fzf doesn't have the built-in completion and key-bindings.
