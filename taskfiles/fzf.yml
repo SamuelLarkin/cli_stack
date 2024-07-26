@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 env:
   BASH_COMPLETION_D: "{{.HOME}}/.bash_completion.d"
@@ -13,6 +13,7 @@ tasks:
       - fzf-git
       - fzf-tmux
       #- shell_completion  # This should now be done with eval "$(fzf --bash)"
+      #- tmux-fzf
 
   forgit:
     desc: >
@@ -57,6 +58,7 @@ tasks:
   fzf-tmux:
     desc: >
       Install fzf's integration with tmux.
+      fzf-tmux: starts fzf in a tmux pane.
     deps:
       - fzf
     cmds:
@@ -99,3 +101,9 @@ tasks:
     precondition:
       - sh: "! fzf --bash"
         msg: fzf doesn't have the built-in completion and key-bindings.
+
+  tmux-fzf:
+    desc: >
+      NOTE: This plugin is intalled in `.tmux.conf` with `set -g @plugin 'sainnhe/tmux-fzf'`.
+      [tmux-fzf](https://github.com/sainnhe/tmux-fzf)
+      Use fzf to manage your tmux work environment!
