@@ -1,0 +1,35 @@
+version: "3"
+
+env:
+  BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
+  BASH_RC_D: "{{.HOME}}/.bashrc.d"
+  BIN_DIR: "{{.HOME}}/.local/bin"
+  INSTALL_DIR: "{{.HOME}}/.local"
+
+tasks:
+  default:
+    deps:
+      - xidel
+
+  xidel:
+    desc: >
+      [forgit - GitHub](https://github.com/wfxr/forgit):
+      A utility tool powered by fzf for using git interactively.
+    cmd:
+      - |
+        curl \
+          --create-dirs --fail --location \
+          --output "xidel-0.9.8.linux64.tar.gz" \
+          'https://sourceforge.net/projects/videlibri/files/Xidel/Xidel%200.9.8/xidel-0.9.8.linux64.tar.gz/download'
+      - defer: rm "xidel-0.9.8.linux64.tar.gz"
+      - tar xf "xidel-0.9.8.linux64.tar.gz"
+      - defer: rm changelog install.sh readme.txt
+      - chmod u+x xidel
+      - mv xidel "{{.BIN_DIR}}"
+    dir: $HOME/tmp
+    env:
+      VERSION: 0.9.8.linux64
+    generates:
+      - "{{.BIN_DIR}}/xidel"
+    status:
+      - which xidel
