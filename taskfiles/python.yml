@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 env:
   BIN_DIR: "{{.HOME}}/.local/bin"
@@ -147,3 +147,21 @@ tasks:
       - "{{.BIN_DIR}}/yq"
     status:
       - which yq
+
+  visidata:
+    desc: >
+      [visidata - GitHub](https://github.com/saulpw/visidata):
+      A terminal spreadsheet multitool for discovering and arranging data.
+    cmds:
+      - python -m venv venv_visidata
+      - defer: rm -fr venv_visidata
+      - source venv_visidata/bin/activate ""
+      - python -m pip install visidata pyinstaller
+      - pyinstaller --onefile venv_visidata/bin/vd
+      - defer: rm -fr dist
+      - install dist/vd "{{.BIN_DIR}}"
+    dir: $HOME/tmp
+    generates:
+      - "{{.BIN_DIR}}/vd"
+    status:
+      - which vd
