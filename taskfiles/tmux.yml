@@ -53,9 +53,10 @@ tasks:
           "https://github.com/libevent/libevent/releases/download/release-$VERSION/libevent-$VERSION.tar.gz"
       - tar xf libevent-$VERSION.tar.gz
       - defer: rm -fr libevent-$VERSION
-      - cd libevent-$VERSION
-      - ./configure --prefix="{{.INSTALL_DIR}}" --enable-shared
-      - \make -j $(nproc) install
+      - |
+        cd libevent-$VERSION
+        ./configure --prefix="{{.INSTALL_DIR}}" --enable-shared
+        \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
       VERSION: 2.1.12-stable
@@ -74,9 +75,10 @@ tasks:
           "https://ftp.gnu.org/gnu/ncurses/ncurses-$VERSION.tar.gz"
       - tar xf ncurses-$VERSION.tar.gz
       - defer: rm -fr ncurses-$VERSION
-      - cd ncurses-$VERSION
-      - ./configure --prefix="{{.INSTALL_DIR}}" --with-shared --with-termlib --enable-pc-files --with-pkg-config-libdir={{.INSTALL_DIR}}/lib/pkgconfig
-      - \make -j $(nproc) install
+      - |
+        cd ncurses-$VERSION
+        ./configure --prefix="{{.INSTALL_DIR}}" --with-shared --with-termlib --enable-pc-files --with-pkg-config-libdir={{.INSTALL_DIR}}/lib/pkgconfig
+        \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
       VERSION: 6.5
@@ -96,9 +98,10 @@ tasks:
           "https://github.com/tmux/tmux/releases/download/$VERSION/tmux-$VERSION.tar.gz"
       - tar xf tmux-$VERSION.tar.gz
       - defer: rm -fr tmux-$VERSION
-      - cd tmux-$VERSION
-      - PKG_CONFIG_PATH={{.INSTALL_DIR}}/lib/pkgconfig ./configure --prefix="{{.INSTALL_DIR}}" --enable-static
-      - \make -j $(nproc) install
+      - |
+        cd tmux-$VERSION
+        PKG_CONFIG_PATH={{.INSTALL_DIR}}/lib/pkgconfig ./configure --prefix="{{.INSTALL_DIR}}" --enable-static
+        \make -j $(nproc) install
     deps: [libevent, ncurses]
     dir: "{{.HOME}}/tmp"
     env:
