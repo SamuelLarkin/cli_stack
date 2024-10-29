@@ -37,3 +37,32 @@ tasks:
          --create-dirs --fail --location \
          --output {{.BASH_COMPLETION_D}}/'#1' \
          'https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/{tmux}'
+
+  tmux:
+    desc: >
+      [tmux - GitHub](https://github.com/tmux/tmux):
+      A terminal multiplexer.
+    cmds:
+      - |
+        curl \
+          --create-dirs --fail --location \
+          --output "tmux-$VERSION.tar.gz" \
+          "https://github.com/tmux/tmux/releases/download/$VERSION/tmux-$VERSION.tar.gz"
+      - tar xf tmux-$VERSION.tar.gz
+      - defer: rm -fr tmux-$VERSION
+      - |
+        cd tmux-$VERSION
+        ./configure --prefix="{{.INSTALL_DIR}}" --enable-static
+        \make -j $(nproc) install
+    dir: "{{.HOME}}/tmp"
+    env:
+      VERSION: 3.5a
+    generates:
+      - "{{.BIN_DIR}}/tmux"
+    status:
+      - which tmux
+    preconditions:
+      - msg: "make must be in your $PATH"
+        sh: which make
+      - msg: "yacc must be in your $PATH"
+        sh: which yacc
