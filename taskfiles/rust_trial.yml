@@ -19,6 +19,7 @@ tasks:
       - jaq
       - jf
       - tabiew
+      - television
       - viddy
 
   ast-grep:
@@ -161,6 +162,19 @@ tasks:
       - "{{.BIN_DIR}}/tw"
     status:
       - which tw
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  television:
+    desc: >
+      [television - GitHub](https://github.com/alexpasmantier/television)
+      The revolution will (not) be televised.
+    cmd: cargo install --locked television
+    generates:
+      - "{{.BIN_DIR}}/tv"
+    status:
+      - which tv
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
