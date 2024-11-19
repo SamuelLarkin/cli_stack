@@ -12,6 +12,7 @@ tasks:
       - ast-grep
       - atuin
       - bandwhich
+      - binsider
       - diffsitter
       - eza
       - grex
@@ -58,6 +59,19 @@ tasks:
       - "{{.BIN_DIR}}/bandwhich"
     status:
       - which bandwhich
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  binsider:
+    desc: >
+      [binsider - GitHub](https://github.com/orhun/binsider):
+      Analyze ELF binaries like a boss 😼🕵️.
+    cmd: cargo install binsider
+    generates:
+      - "{{.BIN_DIR}}/binsider"
+    status:
+      - which binsider
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
