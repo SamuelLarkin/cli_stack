@@ -173,6 +173,7 @@ tasks:
       An extremely fast Python package and project manager, written in Rust.
       [doc](https://docs.astral.sh/uv)
     cmd: curl -LsSf https://astral.sh/uv/install.sh | sh
+    #cmd: curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="{{.INSTALL_DIR}}" sh
     generates:
       - "{{.BIN_DIR}}/uv"
     status:
