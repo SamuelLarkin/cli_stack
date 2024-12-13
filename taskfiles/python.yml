@@ -44,14 +44,15 @@ tasks:
 
   histogram:
     desc: >
-      [histogram.py - GitHub](https://github.com/bitly/data_hacks):
+      [histogram.py - GitHub](https://github.com/bitly/data_hacks) the original:
+      [histogram.py - GitHub](https://github.com/nicholasren/data_hacks3) the python3 version:
       Command line utilities for data analysis.
     #cmd: python3 -m pip install --user --upgrade data_hacks   # Only works with python2
     cmd: python3 -m pip install --user --upgrade data_hacks3
     generates:
-      - "{{.BIN_DIR}}/histogram"
+      - "{{.BIN_DIR}}/histogram.py"
     status:
-      - which histogram
+      - which histogram.py
 
   hq:
     desc: >
