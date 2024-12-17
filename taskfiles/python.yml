@@ -7,6 +7,7 @@ env:
 tasks:
   default:
     deps:
+      - corpora-stats
       - histogram
       - tabulate
       - tqdm
@@ -20,6 +21,32 @@ tasks:
       - "{{.BIN_DIR}}/bpytop"
     status:
       - which bpytop
+
+  corpora-stats:
+    desc: >
+      [corpora-stats - GitHub](https://github.com/SamuelLarkin/corpora_stats):
+      `wc` improved
+    cmds:
+      - git clone https://github.com/SamuelLarkin/corpora_stats
+      # - defer: rm -fr corpora_stats
+      - |
+        cd corpora_stats
+        if [[ $(command -v uv) ]]; then
+          uv venv --relocatable --python 3.12 venv
+          source venv/bin/activate
+          uv pip install .[install]
+        else
+          python -m venv venv
+          source venv/bin/activate ""
+          python -m pip install .[install]
+        fi
+        pyinstaller --onefile venv/bin/corpora-stats
+        install dist/corpora-stats ~/.local/bin/
+    dir: $HOME/tmp
+    generates:
+      - "{{.BIN_DIR}}/corpora-stats"
+    status:
+      - which corpora-stats
 
   glances:
     desc: >
