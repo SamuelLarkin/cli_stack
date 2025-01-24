@@ -13,7 +13,7 @@ tasks:
 
   xidel:
     desc: >
-      [forgit - GitHub](https://github.com/wfxr/forgit):
+      [forgit](https://github.com/wfxr/forgit):
       A utility tool powered by fzf for using git interactively.
     cmd:
       - |

@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 env:
   BIN_DIR: "{{.HOME}}/.local/bin"
@@ -11,7 +11,7 @@ tasks:
 
   bashdb:
     desc: >
-      [bashdb - SourceForge](https://bashdb.sourceforge.net/):
+      [bashdb](https://bashdb.sourceforge.net/):
       The Bash Debugger Project is a source-code debugger for bash that follows
       the gdb command syntax.
     dir: $HOME/tmp

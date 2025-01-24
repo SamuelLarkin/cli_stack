@@ -43,7 +43,7 @@ tasks:
   duf:
     desc: >
       NOTE: use go_extras:duf
-      [duf - GitHub](https://github.com/muesli/duf_:
+      [duf](https://github.com/muesli/duf_:
       Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
     cmds:
       - git clone https://github.com/muesli/duf.git
@@ -63,7 +63,7 @@ tasks:
 
   gh:
     desc: >
-      [gh - GitHub](https://github.com/cli/cli):
+      [gh](https://github.com/cli/cli):
       GitHub’s official command line tool.
     cmds:
       - git clone https://github.com/cli/cli.git gh-cli
@@ -82,7 +82,7 @@ tasks:
 
   jo:
     desc: >
-      [jo - GitHub](https://github.com/jpmens/jo):
+      [jo](https://github.com/jpmens/jo):
       JSON output from a shell.
     cmds:
       - |
@@ -112,7 +112,7 @@ tasks:
 
   lunarvim:
     desc: >
-      [LunarVim - GitHub](https://github.com/LunarVim/LunarVim):
+      [LunarVim](https://github.com/LunarVim/LunarVim):
       🌙 LunarVim is an IDE layer for Neovim. Completely free and community
       driven.
     cmd: bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
@@ -158,7 +158,7 @@ tasks:
 
   nvim.alternate:
     desc: >
-      [neovim - GitHub](https://github.com/neovim/neovim):
+      [neovim](https://github.com/neovim/neovim):
       Vim-fork focused on extensibility and usability.
     cmds:
       - |
@@ -174,7 +174,7 @@ tasks:
 
   pv:
     desc: >
-      [pv - GitHub](https://github.com/a-j-wood/pv):
+      [pv](https://github.com/a-j-wood/pv):
       a terminal-based tool for monitoring the progress of data through a
       pipeline.
     cmds:
@@ -203,7 +203,8 @@ tasks:
 
   vifm:
     desc: >
-      [vifm – Vim-like file manager](https://github.com/vifm/vifm).
+      [vifm](https://github.com/vifm/vifm):
+      Vim-like file manager.
     cmds:
       - |
         curl \

@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 env:
   # [The directory where go install and go get will place binaries after building main packages](https://www.programming-books.io/essential/go/gopath-goroot-gobin-d6da4b8481f94757bae43be1fdfa9e73#fcf0957a-4f5a-4f3e-870f-dd49aead22bd)
@@ -14,7 +14,7 @@ tasks:
 
   chezmoi:
     desc: >
-      [chezmoi - GitHub](https://github.com/twpayne/chezmoi):
+      [chezmoi](https://github.com/twpayne/chezmoi):
       Manage your dotfiles across multiple diverse machines, securely.
       [ChezMoi - Documentation](https://www.chezmoi.io/)
     cmd: go install github.com/twpayne/chezmoi@latest
@@ -28,7 +28,7 @@ tasks:
 
   gdu:
     desc: >
-      [go DiskUsage(gdu) - GitHub](https://github.com/dundee/gdu):
+      [go DiskUsage(gdu)](https://github.com/dundee/gdu):
       Pretty fast disk usage analyzer written in Go.
     cmd: go install github.com/dundee/gdu/v5/cmd/gdu@latest
     generates:
@@ -41,7 +41,7 @@ tasks:
 
   glow:
     desc: >
-      [Glow - GitHub](https://github.com/charmbracelet/glow):
+      [Glow](https://github.com/charmbracelet/glow):
       Render markdown on the CLI, with pizzazz!
     cmd: go install github.com/charmbracelet/glow@latest
     generates:
@@ -54,7 +54,7 @@ tasks:
 
   lazygit:
     desc: >
-      [lazygit - GitHub](https://github.com/jesseduffield/lazygit):
+      [lazygit](https://github.com/jesseduffield/lazygit):
       A simple terminal UI for git commands, written in Go with the gocui
       library.
     cmd: go install github.com/jesseduffield/lazygit@latest

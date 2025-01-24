@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 # [6 stellar libraries for profiling Python code](https://www.infoworld.com/article/3600993/6-stellar-libraries-for-profiling-python-code.html)
 
 env:
@@ -13,7 +13,7 @@ tasks:
 
   py-spy:
     desc: >
-      [py-spy](https://github.com/benfred/py-spy)
+      [py-spy](https://github.com/benfred/py-spy):
       py-spy: Sampling profiler for Python programs
       py-spy top -- python myprogram.py
     cmd: python3 -m pip install --user --upgrade py-spy
@@ -24,7 +24,7 @@ tasks:
 
   pyinstrument:
     desc: >
-      [Pyinstrument](https://github.com/joerick/pyinstrument)
+      [Pyinstrument](https://github.com/joerick/pyinstrument):
       Pyinstrument is a Python profiler.
     cmd: python3 -m pip install --user --upgrade pyinstrument
     generates:

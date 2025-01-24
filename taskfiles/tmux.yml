@@ -90,7 +90,7 @@ tasks:
 
   tmux:
     desc: >
-      [tmux - GitHub](https://github.com/tmux/tmux):
+      [tmux](https://github.com/tmux/tmux):
       A terminal multiplexer.
     cmds:
       - |

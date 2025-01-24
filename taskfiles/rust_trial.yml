@@ -52,7 +52,7 @@ tasks:
   bandwhich:
     desc: >
       WARNING Needs sudo
-      [bandwhich - GitHub](https://github.com/imsnif/bandwhich):
+      [bandwhich](https://github.com/imsnif/bandwhich):
       Terminal bandwidth utilization tool.
     cmd: cargo install --force bandwhich
     generates:
@@ -65,7 +65,7 @@ tasks:
 
   binsider:
     desc: >
-      [binsider - GitHub](https://github.com/orhun/binsider):
+      [binsider](https://github.com/orhun/binsider):
       Analyze ELF binaries like a boss 😼🕵️.
     cmd: cargo install binsider
     generates:
@@ -79,7 +79,7 @@ tasks:
   diffsitter:
     desc: >
       WARNING: Couldn't get it to compile.
-      [diffsitter - GitHub](https://github.com/afnanenayet/diffsitter):
+      [diffsitter](https://github.com/afnanenayet/diffsitter):
       A tree-sitter based AST difftool to get meaningful semantic diffs.
     cmds:
       - cargo install diffsitter --bin diffsitter
@@ -95,7 +95,7 @@ tasks:
 
   eza:
     desc: >
-      [eza - GitHub](https://github.com/eza-community/eza):
+      [eza](https://github.com/eza-community/eza):
       A modern, maintained replacement for ls.
     cmd: cargo install --force eza
     generates:
@@ -108,7 +108,7 @@ tasks:
 
   grex:
     desc: >
-      [grex - GitHub](https://github.com/pemistahl/grex):
+      [grex](https://github.com/pemistahl/grex):
       command-line tool and Rust library for generating regular expressions
       from user-provided test cases.
       [Generate a matching regular expression from the test cases you provide](https://pemistahl.github.io/grex-js/)
@@ -124,7 +124,7 @@ tasks:
   helix:
     desc: >
       [Helix](https://helix-editor.com/)
-      [Helix - GitHub](https://github.com/helix-editor/helix)
+      [Helix](https://github.com/helix-editor/helix):
       A post-modern text editor.
     cmds:
       - git clone https://github.com/helix-editor/helix
@@ -143,7 +143,7 @@ tasks:
 
   jaq:
     desc: >
-      [jaq - GitHub](https://github.com/01mf02/jaq)
+      [jaq](https://github.com/01mf02/jaq):
       A jq clone focussed on correctness, speed, and simplicity.
     cmd: cargo install --force jaq
     generates:
@@ -156,7 +156,7 @@ tasks:
 
   jf:
     desc: >
-      [jf - GitHub](https://github.com/sayanarijit/jf)
+      [jf](https://github.com/sayanarijit/jf):
       jf %q "JSON Formatted".
     cmd: cargo install --force jf
     generates:
@@ -169,7 +169,7 @@ tasks:
 
   tabiew:
     desc: >
-      [tabiew - GitHub](https://github.com/shshemi/tabiew)
+      [tabiew](https://github.com/shshemi/tabiew)
       A lightweight TUI application to view and query tabular data files, such as CSV, TSV, or parquet.
     cmd: cargo install --force tabiew
     generates:
@@ -182,7 +182,7 @@ tasks:
 
   television:
     desc: >
-      [television - GitHub](https://github.com/alexpasmantier/television)
+      [television](https://github.com/alexpasmantier/television):
       The revolution will (not) be televised.
     cmd: cargo install --locked television
     generates:
@@ -195,7 +195,7 @@ tasks:
 
   viddy:
     desc: >
-      [viddy - GitHub](https://github.com/sachaos/viddy)
+      [viddy](https://github.com/sachaos/viddy):
       👀 A modern watch command. Time machine and pager etc.
     cmd: cargo install --force viddy
     generates:

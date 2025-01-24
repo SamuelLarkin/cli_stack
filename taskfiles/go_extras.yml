@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 env:
   # [The directory where go install and go get will place binaries after building main packages](https://www.programming-books.io/essential/go/gopath-goroot-gobin-d6da4b8481f94757bae43be1fdfa9e73#fcf0957a-4f5a-4f3e-870f-dd49aead22bd)
@@ -24,7 +24,7 @@ tasks:
 
   archiver:
     desc: >
-      [archiver - GitHub](https://github.com/mholt/archiver):
+      [archiver](https://github.com/mholt/archiver):
       Easily create & extract archives, and compress & decompress files of
       various formats.
     cmd: go install github.com/mholt/archiver/v3/cmd/arc@latest
@@ -39,9 +39,9 @@ tasks:
   direnv:
     desc: >
       [direnv – Documentation](https://direnv.net/): unclutter your .profile
-      [direnv - GitHub](https://github.com/direnv/direnv)
+      [direnv](https://github.com/direnv/direnv)
     summray: >
-        eval "$(direnv hook bash)"
+      eval "$(direnv hook bash)"
     cmd: go install github.com/direnv/direnv@latest
     generates:
       - "{{.GOBIN}}/direnv"
@@ -53,7 +53,7 @@ tasks:
 
   duf:
     desc: >
-      [duf - GitHub](https://github.com/muesli/duf):
+      [duf](https://github.com/muesli/duf):
       Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
     cmd: go install github.com/muesli/duf@latest
     generates:
@@ -66,7 +66,7 @@ tasks:
 
   f2:
     desc: >
-      [F2 - GitHub](https://github.com/ayoisaiah/f2):
+      [F2](https://github.com/ayoisaiah/f2):
       F2 is a cross-platform command-line tool for batch renaming files and
       directories quickly and safely. Written in Go!
     cmd: go install github.com/ayoisaiah/f2/cmd/f2@latest
@@ -80,7 +80,7 @@ tasks:
 
   gojq:
     desc: >
-      [gojq - GitHub](Pure Go implementation of jq):
+      [gojq](Pure Go implementation of jq):
       Pure Go implementation of jq.
       This is an implementation of jq command written in Go language. You can
       also embed gojq as a library to your Go products.
@@ -95,7 +95,7 @@ tasks:
 
   gotz:
     desc: >
-      [gotz - GitHub](https://github.com/merschformann/gotz):
+      [gotz](https://github.com/merschformann/gotz):
       gotz - a simple CLI timezone info tool.
     cmd: go install github.com/merschformann/gotz@latest
     generates:
@@ -108,7 +108,7 @@ tasks:
 
   grv:
     desc: >
-      [grv - GitHub](https://github.com/rgburke/grv)
+      [grv](https://github.com/rgburke/grv)
       GRV is a terminal interface for viewing git repositories.
     cmds:
       - |
@@ -127,7 +127,7 @@ tasks:
 
   jid:
     desc: >
-      [jid - GitHub](https://github.com/simeji/jid)
+      [jid](https://github.com/simeji/jid)
       json incremental digger.
     cmd: go install github.com/simeji/jid/cmd/jid@latest
     generates:
@@ -140,7 +140,7 @@ tasks:
 
   jpq:
     desc: >
-      [jqp - GitHub](https://github.com/noahgorstein/jqp)
+      [jqp](https://github.com/noahgorstein/jqp)
       A TUI playground to experiment with jq.
     cmd: go install github.com/noahgorstein/jqp@latest
     generates:
@@ -153,7 +153,7 @@ tasks:
 
   lazydocker:
     desc: >
-      [lazydocker - GitHub](https://github.com/jesseduffield/lazydocker):
+      [lazydocker](https://github.com/jesseduffield/lazydocker):
       A simple terminal UI for both docker and docker-compose, written in Go
       with the gocui library.
     cmd: go install github.com/jesseduffield/lazydocker@latest
@@ -167,7 +167,7 @@ tasks:
 
   lf:
     desc: >
-      [lf - GitHub](https://github.com/gokcehan/lf):
+      [lf](https://github.com/gokcehan/lf):
       lf (as in "list files") is a terminal file manager written in Go with a
       heavy inspiration from ranger file manager.
     cmd: CGO_ENABLED=0  go install -ldflags="-s -w" github.com/gokcehan/lf@latest
@@ -181,7 +181,7 @@ tasks:
 
   miller:
     desc: >
-      [Miller - GitHub](https://github.com/johnkerl/miller):
+      [Miller](https://github.com/johnkerl/miller):
       Miller is like awk, sed, cut, join, and sort for data formats such as
       CSV, TSV, JSON, JSON Lines, and positionally-indexed.
     #cmd: go install github.com/johnkerl/miller/cmd/mlr@latest
@@ -209,7 +209,7 @@ tasks:
 
   up:
     desc: >
-      [up - GitHub](https://github.com/akavel/up)
+      [up](https://github.com/akavel/up)
       Ultimate Plumber is a tool for writing Linux pipes with instant live preview.
     cmd: go install github.com/akavel/up@latest
     generates:
@@ -222,7 +222,7 @@ tasks:
 
   yq:
     desc: >
-      [yq - gitHub](https://github.com/mikefarah/yq):
+      [yq](https://github.com/mikefarah/yq):
       A lightweight and portable command-line YAML, JSON and XML processor.
       yq uses jq like syntax but works with yaml files as well as json and xml.
     cmd: go install github.com/mikefarah/yq/v4@latest

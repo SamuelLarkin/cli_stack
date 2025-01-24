@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 tasks:
   default:
@@ -7,5 +7,6 @@ tasks:
 
   rename:
     desc: >
-      [rename - Cpan File::Rename](https://metacpan.org/dist/File-Rename/view/rename.PL).
+      [rename](https://metacpan.org/dist/File-Rename/view/rename.PL):
+      Cpan File::Rename.
     cmd: cpan install File::Rename

@@ -14,7 +14,7 @@ tasks:
 
   elvish:
     desc: >
-      [elvish - GitHub](https://github.com/elves/elvish):
+      [elvish](https://github.com/elves/elvish):
       Elvish = Expressive Programming Language + Versatile Interactive Shell
     cmd: go install src.elv.sh/cmd/elvish@latest
     generates:
@@ -24,7 +24,7 @@ tasks:
 
   fish:
     desc: >
-      [fish - GitHub](https://github.com/fish-shell/fish-shell/):
+      [fish](https://github.com/fish-shell/fish-shell/):
       the friendly interactive shell.
       [FishShell](https://fishshell.com/): Finally, a command line shell for the
       90s fish is a smart and user-friendly command line shell for Linux, macOS,
@@ -53,7 +53,7 @@ tasks:
 
   nu:
     desc: >
-      [nushell - GitHub](https://github.com/nushell/nushell):
+      [nushell](https://github.com/nushell/nushell):
       A new type of shell.
     cmds:
       #- cargo install --force --git https://github.com/nushell/nushell

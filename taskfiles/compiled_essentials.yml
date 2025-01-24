@@ -18,7 +18,7 @@ tasks:
 
   htop:
     desc: >
-      [htop - GitHub](https://github.com/htop-dev/htop):
+      [htop](https://github.com/htop-dev/htop):
       is a cross-platform interactive process viewer.
     cmds:
       - |
@@ -47,7 +47,7 @@ tasks:
 
   hyperfine:
     desc: >
-      [hyperfine - GitHub](https://github.com/sharkdp/hyperfine):
+      [hyperfine](https://github.com/sharkdp/hyperfine):
       A command-line benchmarking tool.
       NOTE: probably already install by `cargo install hyperfine`.
     cmds:
@@ -70,7 +70,7 @@ tasks:
 
   jq:
     desc: >
-      [jq - GitHub](https://stedolan.github.io/jq/): jq is a lightweight and flexible command-line JSON processor.
+      [jq](https://stedolan.github.io/jq/): jq is a lightweight and flexible command-line JSON processor.
       [jq - doc](https://github.com/stedolan/jq): jq is a lightweight and flexible command-line JSON processor.
     cmds:
       - |
@@ -88,7 +88,7 @@ tasks:
 
   jq_build:
     desc: >
-      [jq - GitHub](https://stedolan.github.io/jq/): jq is a lightweight and flexible command-line JSON processor.
+      [jq](https://stedolan.github.io/jq/): jq is a lightweight and flexible command-line JSON processor.
       [jq - doc](https://github.com/stedolan/jq): jq is a lightweight and flexible command-line JSON processor.
     cmds:
       - |
@@ -118,7 +118,7 @@ tasks:
 
   nvim:
     desc: >
-      [neovim - GitHub](https://github.com/neovim/neovim):
+      [neovim](https://github.com/neovim/neovim):
       Vim-fork focused on extensibility and usability.
     cmds:
       - git clone --branch $VERSION https://github.com/neovim/neovim.git
@@ -168,7 +168,8 @@ tasks:
 
   tig:
     desc: >
-      Install tig
+      [tig](https://github.com/jonas/tig):
+      Text-mode interface for git
     cmds:
       - |
         curl \
@@ -207,7 +208,7 @@ tasks:
 
   ugrep:
     desc: >
-      [ug/ugrep - GitHub](https://github.com/Genivia/ugrep):
+      [ug/ugrep](https://github.com/Genivia/ugrep):
       Search for anything in everything... ultra fast.
     cmds:
       - |
