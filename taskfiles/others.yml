@@ -37,20 +37,20 @@ tasks:
     desc: >
       [forgit](https://github.com/wfxr/forgit):
       A utility tool powered by fzf for using git interactively.
-    cmd:
+    cmds:
       - |
         curl \
           --create-dirs --fail --location \
-          --output "xidel-0.9.8.linux64.tar.gz" \
-          'https://sourceforge.net/projects/videlibri/files/Xidel/Xidel%200.9.8/xidel-0.9.8.linux64.tar.gz/download'
-      - defer: rm "xidel-0.9.8.linux64.tar.gz"
-      - tar xf "xidel-0.9.8.linux64.tar.gz"
+          --output "xidel-$VERSION.linux64.tar.gz" \
+          "https://sourceforge.net/projects/videlibri/files/Xidel/Xidel%20$VERSION/xidel-$VERSION.linux64.tar.gz/download"
+      - defer: rm "xidel-$VERSION.linux64.tar.gz"
+      - tar xf "xidel-$VERSION.linux64.tar.gz"
       - defer: rm changelog install.sh readme.txt
       - chmod u+x xidel
       - mv xidel "{{.BIN_DIR}}"
     dir: $HOME/tmp
     env:
-      VERSION: 0.9.8.linux64
+      VERSION: 0.9.8
     generates:
       - "{{.BIN_DIR}}/xidel"
     status:
