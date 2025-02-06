@@ -9,7 +9,29 @@ env:
 tasks:
   default:
     deps:
+      - ollama
       - xidel
+
+  ollama:
+    desc: >
+      [oLLaMa](https://github.com/ollama/ollama):
+      Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.
+      Note: we can't simply to `go install github.com/ollama/ollama@latest` or we won't get the GPU speed up libraries.
+    cmds:
+      - |
+        curl \
+          --create-dirs --fail --location \
+          --output "ollama-$VERSION-linux-amd64.tgz" \
+        "https://github.com/ollama/ollama/releases/download/$VERSION/ollama-linux-amd64.tgz"
+      - defer: rm "ollama-$VERSION-linux-amd64.tgz"
+      - tar xf "ollama-$VERSION-linux-amd64.tgz" --directory={{.INSTALL_DIR}}
+    dir: $HOME/tmp
+    env:
+      VERSION: v0.5.7
+    generates:
+      - "{{.BIN_DIR}}/ollama"
+    status:
+      - which ollama
 
   xidel:
     desc: >
