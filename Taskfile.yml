@@ -12,6 +12,7 @@ includes:
   go_extras: taskfiles/go_extras.yml
   go_trial: taskfiles/go_trial.yml
   other_shell: taskfiles/other_shell.yml
+  others: taskfiles/others.yml
   perl: taskfiles/perl.yml
   plot_tools: taskfiles/plot_tools.yml
   python: taskfiles/python.yml
