@@ -19,6 +19,7 @@ tasks:
       - helix
       - jaq
       - jf
+      - presenterm
       - tabiew
       - television
       - viddy
@@ -163,6 +164,19 @@ tasks:
       - "{{.BIN_DIR}}/jf"
     status:
       - which jf
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  presenterm:
+    desc: >
+      [presenterm](https://github.com/mfontanini/presenterm)
+      A markdown terminal slideshow tool.
+    cmd: cargo install --force --locked presenterm
+    generates:
+      - "{{.BIN_DIR}}/presenterm"
+    status:
+      - which presenterm
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
