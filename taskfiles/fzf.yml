@@ -19,13 +19,21 @@ tasks:
     desc: >
       [forgit](https://github.com/wfxr/forgit):
       A utility tool powered by fzf for using git interactively.
-    cmd: >
-      curl \
-         --create-dirs --fail --location \
-         --output {{.BIN_DIR}}/'#1' \
-         'https://raw.githubusercontent.com/wfxr/forgit/master/bin/{git-forgit}'
+    cmds:
+      - |
+        curl \
+          --create-dirs --fail --location \
+          --output {{.BIN_DIR}}/'#1' \
+          'https://raw.githubusercontent.com/wfxr/forgit/master/bin/{git-forgit}'
+      - |
+        curl \
+          --create-dirs --fail --location \
+          --output {{.BASH_COMPLETION_D}}/'#1' \
+          'https://raw.githubusercontent.com/wfxr/forgit/refs/heads/main/completions/{git-forgit}.bash'
+      - chmod u+x {{.BIN_DIR}}/fzf-tmux
     generates:
       - "{{.BIN_DIR}}/forgit"
+      - "{{.BASH_COMPLETION_D}}/git-forgit"
     status:
       - which forgit
 
