@@ -13,7 +13,6 @@ tasks:
       - fzf
       - fzf-git
       - fzf-tmux
-      #- shell_completion  # This should now be done with eval "$(fzf --bash)"
       #- tmux-fzf
 
   forgit:
@@ -73,41 +72,6 @@ tasks:
       - "{{.BIN_DIR}}/fzf-tmux"
     status:
       - which fzf-tmux
-
-  shell_completion:
-    desc: >
-      Install fzf's shell completion.
-      NOTE: Set up fzf key bindings and fuzzy completion
-      eval "$(fzf --bash)"
-    deps:
-      - fzf
-    cmds:
-      # - |
-      #   curl \
-      #     --create-dirs --fail --location \
-      #     --output {{.BASH_COMPLETION_D}}/fzf \
-      #     'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{completion.bash}'
-      # - |
-      #   curl \
-      #     --create-dirs --fail --location \
-      #     --output {{.BASH_COMPLETION_D}}/fzf-'#1' \
-      #     'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{key-bindings.bash}'
-      - |
-        curl \
-          --create-dirs --fail --location \
-          --output ~/.config/fish/functions/fzf-'#1' \
-          'https://raw.githubusercontent.com/junegunn/fzf/master/shell/{key-bindings.fish}'
-    generates:
-      # - "{{.BASH_COMPLETION_D}}/fzf"
-      # - "{{.BASH_COMPLETION_D}}/fzf-key-bindings.bash"
-      - ~/.config/fish/functions/fzf-key-bindings.fish
-    status:
-      # - test -f {{.BASH_COMPLETION_D}}/fzf
-      # - test -f {{.BASH_COMPLETION_D}}/fzf-key-bindings.bash
-      - test -f ~/.config/fish/functions/fzf-key-bindings.fish
-    precondition:
-      - sh: "! fzf --bash"
-        msg: fzf doesn't have the built-in completion and key-bindings.
 
   tmux-fzf:
     desc: >
