@@ -15,12 +15,16 @@ tasks:
   install_plugins:
     desc: >
       Install tmux's plugins.
+    summary: |
+      Install tmux's plugins.
     cmd: "{{.HOME}}/.tmux/plugins/tpm/bin/install_plugins"
     deps:
       - plugin_manager
 
   plugin_manager:
     desc: >
+      Install tmux's plugin manager.
+    summary: |
       Install tmux's plugin manager.
     cmd: |
       git \
@@ -32,6 +36,8 @@ tasks:
   shell_completion:
     desc: >
       Install tmux shell completion.
+    summary: |
+      Install tmux shell completion.
     cmd: |
       curl \
          --create-dirs --fail --location \
@@ -40,11 +46,17 @@ tasks:
 
   libevent:
     desc: >
-      [libevent](https://libevent.org/):
       The libevent API provides a mechanism to execute a callback function when
       a specific event occurs on a file descriptor or after a timeout has been
       reached. Furthermore, libevent also support callbacks due to signals or
       regular timeouts.
+    summary: |
+      The libevent API provides a mechanism to execute a callback function when
+      a specific event occurs on a file descriptor or after a timeout has been
+      reached. Furthermore, libevent also support callbacks due to signals or
+      regular timeouts.
+
+      [libevent](https://libevent.org/)
     cmds:
       - |
         curl \
@@ -67,7 +79,9 @@ tasks:
 
   ncurses:
     desc: >
-      [ncurses](https://libevent.org/):
+      [ncurses](https://libevent.org/)
+    summary: |
+      [ncurses](https://libevent.org/)
     cmds:
       - |
         curl \
@@ -90,8 +104,11 @@ tasks:
 
   tmux:
     desc: >
-      [tmux](https://github.com/tmux/tmux):
       A terminal multiplexer.
+    summary: |
+      A terminal multiplexer.
+
+      [tmux](https://github.com/tmux/tmux)
     cmds:
       - |
         curl \

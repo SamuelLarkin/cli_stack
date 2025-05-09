@@ -13,6 +13,8 @@ tasks:
   plugin_install:
     desc: >
       Trigger vim's Plug system to install plugins.
+    summary: |
+      Trigger vim's Plug system to install plugins.
     deps:
       - plugin_manager
     # I can't seem to get the vim commands to work when in multiline format!
@@ -29,6 +31,8 @@ tasks:
 
   plugin_manager:
     desc: >
+      Intall plug.vim
+    summary: |
       Intall plug.vim
     cmd: |
       curl \

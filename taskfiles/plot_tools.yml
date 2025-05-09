@@ -13,20 +13,29 @@ tasks:
 
   asciigraph:
     desc: >
-      [asciigraph](https://github.com/guptarohit/asciigraph):
       Go package to make lightweight ASCII line graphs ╭┈╯.
+    summary: |
+      Go package to make lightweight ASCII line graphs ╭┈╯.
+
+      [asciigraph](https://github.com/guptarohit/asciigraph)
     cmd: go install github.com/guptarohit/asciigraph/cmd/asciigraph@latest
 
   bashplotlib:
     desc: >
-      [bashplotlib](https://github.com/glamp/bashplotlib):
       plotting in the terminal.
+    summary: |
+      plotting in the terminal.
+
+      [bashplotlib](https://github.com/glamp/bashplotlib)
     cmd: python3 -m pip install --user --upgrade bashplotlib
 
   feedgnuplot:
     desc: >
-      [feedgnuplot](https://github.com/dkogan/feedgnuplot):
       This is a flexible, command-line-oriented frontend to Gnuplot.
+    summary: |
+      This is a flexible, command-line-oriented frontend to Gnuplot.
+
+      [feedgnuplot](https://github.com/dkogan/feedgnuplot)
     cmds:
       - git clone https://github.com/dkogan/feedgnuplot.git
       - defer: rm -fr feedgnuplot
@@ -42,9 +51,12 @@ tasks:
 
   histogram:
     desc: >
-      [histogram.py](https://github.com/bitly/data_hacks) the original:
-      [histogram.py](https://github.com/nicholasren/data_hacks3) the python3 version:
       Command line utilities for data analysis.
+    summary: |
+      Command line utilities for data analysis.
+
+      [histogram.py](https://github.com/nicholasren/data_hacks3) the python3 version
+      [histogram.py](https://github.com/bitly/data_hacks) the original
     #cmd: python3 -m pip install --user --upgrade data_hacks   # Only works with python2
     cmd: python3 -m pip install --user --upgrade data_hacks3
     generates:
@@ -54,65 +66,102 @@ tasks:
 
   pipeplot:
     desc: >
-      [Pipe Plot](https://github.com/MyGodIsHe/pipeplot):
       pipeplot draws an interactive graph in a terminal based on data from
       pipe.
+    summary: |
+      pipeplot draws an interactive graph in a terminal based on data from
+      pipe.
+
+      [Pipe Plot](https://github.com/MyGodIsHe/pipeplot)
     cmd: python3 -m pip install --user --upgrade pipeplot
 
   plotext:
     desc: >
-      [plotext](https://github.com/piccolomo/plotext):
       plots directly on terminal, it has no dependencies and the syntax is very
       similar to matplotlib. It also provide a simple command line tool.
       Doesn't seem to have a CLI.
+    summary: |
+      plots directly on terminal, it has no dependencies and the syntax is very
+      similar to matplotlib. It also provide a simple command line tool.
+      Doesn't seem to have a CLI.
+
+      [plotext](https://github.com/piccolomo/plotext)
     cmd: python3 -m pip install --user --upgrade plotext
 
   plotille:
     desc: >
-      [Plotille](https://github.com/tammoippen/plotille):
       Plot, scatter plots and histograms in the terminal using braille dots,
       with (almost) no dependancies. Plot with color or make complex figures -
       similar to a very small sibling to matplotlib. Or use the canvas to plot
       dots and lines yourself.
       Library Only?
+    summary: |
+      Plot, scatter plots and histograms in the terminal using braille dots,
+      with (almost) no dependancies. Plot with color or make complex figures -
+      similar to a very small sibling to matplotlib. Or use the canvas to plot
+      dots and lines yourself.
+      Library Only?
+
+      [Plotille](https://github.com/tammoippen/plotille)
     cmd: python3 -m pip install --user --upgrade plotille
 
   pysparklines:
     desc: >
-      [pysparkline](https://github.com/RedKrieg/pysparklines):
       Takes series data via stdin, command line, or API and prints a sparkline representation.
+    summary: |
+      Takes series data via stdin, command line, or API and prints a sparkline representation.
+
+      [pysparkline](https://github.com/RedKrieg/pysparklines)
     cmd: python3 -m pip install --user --upgrade pysparklines
 
   smag:
     desc: >
-      [smag - show me a graph!](https://github.com/aantn/smag):
       Easily create graphs from cli commands and view them in the terminal.
       Like the watch command but with a graph of the output.
+    summary: |
+      Easily create graphs from cli commands and view them in the terminal.
+      Like the watch command but with a graph of the output.
+
+      [smag - show me a graph!](https://github.com/aantn/smag)
     cmd: cargo install --force --git https://github.com/aantn/smag
 
   termeter:
     desc: >
-      [termeter](https://github.com/atsaki/termeter):
       Visualize data in the terminal.
+    summary: |
+      Visualize data in the terminal.
+
+      [termeter](https://github.com/atsaki/termeter)
     cmd: go install github.com/atsaki/termeter/cmd/termeter@latest
 
   termgraph:
     desc: >
-      [Termgraph](https://github.com/mkaz/termgraph):
       A command-line tool that draws basic graphs in the terminal, written in Python.
-      [Termgraph – How To Draw basic graphs on Linux terminal - Blog](https://computingforgeeks.com/termgraph-command-line-tool-draw-graphs-in-terminal-linux/).
+    summary: |
+      A command-line tool that draws basic graphs in the terminal, written in Python.
+
+      [Termgraph](https://github.com/mkaz/termgraph)
+      [Termgraph – How To Draw basic graphs on Linux terminal - Blog](https://computingforgeeks.com/termgraph-command-line-tool-draw-graphs-in-terminal-linux/)
     cmd: python3 -m pip install --user --upgrade termgraph
 
   termplotlib:
     desc: >
-      [termplotlib](https://github.com/nschloe/termplotlib):
       termplotlib is a Python library for all your terminal plotting needs. It
       aims to work like matplotlib.
+    summary: |
+      termplotlib is a Python library for all your terminal plotting needs. It
+      aims to work like matplotlib.
+
+      [termplotlib](https://github.com/nschloe/termplotlib)
     cmd: python3 -m pip install --user --upgrade termplotlib
 
   ttyplot:
     desc: >
-      [ttyplot](https://github.com/tenox7/ttyplot):
       a realtime plotting utility for text mode consoles and terminals with data input from stdin / pipe.
       Needs to be compiled
+    summary: |
+      a realtime plotting utility for text mode consoles and terminals with data input from stdin / pipe.
+      Needs to be compiled
+
+      [ttyplot](https://github.com/tenox7/ttyplot)
     cmd: echo "Needs to be compiled"

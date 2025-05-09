@@ -14,8 +14,11 @@ tasks:
 
   elvish:
     desc: >
-      [elvish](https://github.com/elves/elvish):
       Elvish = Expressive Programming Language + Versatile Interactive Shell
+    summary: |
+      Elvish = Expressive Programming Language + Versatile Interactive Shell
+
+      [elvish](https://github.com/elves/elvish)
     cmd: go install src.elv.sh/cmd/elvish@latest
     generates:
       - "{{.BIN_DIR}}/elvish"
@@ -24,11 +27,16 @@ tasks:
 
   fish:
     desc: >
-      [fish](https://github.com/fish-shell/fish-shell/):
-      the friendly interactive shell.
-      [FishShell](https://fishshell.com/): Finally, a command line shell for the
-      90s fish is a smart and user-friendly command line shell for Linux, macOS,
-      and the rest of the family.
+      The friendly interactive shell.
+    summary: |
+      The friendly interactive shell.
+
+      Finally, a command line shell for the 90s fish is a smart and
+      user-friendly command line shell for Linux, macOS, and the rest of the
+      family.
+
+      [fish](https://github.com/fish-shell/fish-shell/)
+      [FishShell](https://fishshell.com/)
     cmds:
       - |
         curl \
@@ -53,8 +61,11 @@ tasks:
 
   nu:
     desc: >
-      [nushell](https://github.com/nushell/nushell):
       A new type of shell.
+    summary: |
+      A new type of shell.
+
+      [nushell](https://github.com/nushell/nushell)
     cmds:
       #- cargo install --force --git https://github.com/nushell/nushell
       - cargo install --force nu
@@ -65,8 +76,11 @@ tasks:
 
   xonsh:
     desc: >
-      [xonsh](https://xon.sh/):
-      XONSH is a Python-powered shell
+      XONSH is a Python-powered shell.
+    summary: |
+      XONSH is a Python-powered shell.
+
+      [xonsh](https://xon.sh/)
     cmd: python3 -m pip install --user --upgrade 'xonsh[full]'
     status:
       - which xonsh

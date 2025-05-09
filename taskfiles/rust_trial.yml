@@ -27,8 +27,11 @@ tasks:
 
   ast-grep:
     desc: >
-      [ast-grep](https://github.com/ast-grep/ast-grep):
       ⚡A CLI tool for code structural search, lint and rewriting. Written in Rust
+    summary: |
+      ⚡A CLI tool for code structural search, lint and rewriting. Written in Rust
+
+      [ast-grep](https://github.com/ast-grep/ast-grep)
     cmd: cargo install --force ast-grep --locked
     generates:
       - "{{.BIN_DIR}}/sg"
@@ -40,8 +43,11 @@ tasks:
 
   atuin:
     desc: >
-      [atuin](https://github.com/atuinsh/atuin):
       ✨ Magical shell history.
+    summary: |
+      ✨ Magical shell history.
+
+      [atuin](https://github.com/atuinsh/atuin)
     cmd: cargo install --force atuin
     generates:
       - "{{.BIN_DIR}}/atuin"
@@ -53,9 +59,13 @@ tasks:
 
   bandwhich:
     desc: >
-      WARNING Needs sudo
-      [bandwhich](https://github.com/imsnif/bandwhich):
       Terminal bandwidth utilization tool.
+      WARNING Needs sudo.
+    summary: |
+      Terminal bandwidth utilization tool.
+      WARNING Needs sudo.
+
+      [bandwhich](https://github.com/imsnif/bandwhich)
     cmd: cargo install --force bandwhich
     generates:
       - "{{.BIN_DIR}}/bandwhich"
@@ -67,8 +77,11 @@ tasks:
 
   binsider:
     desc: >
-      [binsider](https://github.com/orhun/binsider):
       Analyze ELF binaries like a boss 😼🕵️.
+    summary: |
+      Analyze ELF binaries like a boss 😼🕵️.
+
+      [binsider](https://github.com/orhun/binsider)
     cmd: cargo install binsider
     generates:
       - "{{.BIN_DIR}}/binsider"
@@ -80,9 +93,13 @@ tasks:
 
   diffsitter:
     desc: >
-      WARNING: Couldn't get it to compile.
-      [diffsitter](https://github.com/afnanenayet/diffsitter):
       A tree-sitter based AST difftool to get meaningful semantic diffs.
+      WARNING: Couldn't get it to compile.
+    summary: |
+      A tree-sitter based AST difftool to get meaningful semantic diffs.
+      WARNING: Couldn't get it to compile.
+
+      [diffsitter](https://github.com/afnanenayet/diffsitter)
     cmds:
       - cargo install diffsitter --bin diffsitter
       - cargo install diffsitter --bin diffsitter_completions
@@ -97,8 +114,11 @@ tasks:
 
   eza:
     desc: >
-      [eza](https://github.com/eza-community/eza):
       A modern, maintained replacement for ls.
+    summary: |
+      A modern, maintained replacement for ls.
+
+      [eza](https://github.com/eza-community/eza)
     cmd: cargo install --force eza
     generates:
       - "{{.BIN_DIR}}/eza"
@@ -110,9 +130,13 @@ tasks:
 
   grex:
     desc: >
-      [grex](https://github.com/pemistahl/grex):
       command-line tool and Rust library for generating regular expressions
       from user-provided test cases.
+    summary: |
+      command-line tool and Rust library for generating regular expressions
+      from user-provided test cases.
+
+      [grex](https://github.com/pemistahl/grex)
       [Generate a matching regular expression from the test cases you provide](https://pemistahl.github.io/grex-js/)
     cmd: cargo install --force grex
     generates:
@@ -125,9 +149,12 @@ tasks:
 
   helix:
     desc: >
-      [Helix](https://helix-editor.com/)
-      [Helix](https://github.com/helix-editor/helix):
       A post-modern text editor.
+    summary: |
+      A post-modern text editor.
+
+      [Helix](https://helix-editor.com/)
+      [Helix](https://github.com/helix-editor/helix)
     cmds:
       - git clone https://github.com/helix-editor/helix
       - defer: rm -fr helix
@@ -145,8 +172,11 @@ tasks:
 
   jaq:
     desc: >
-      [jaq](https://github.com/01mf02/jaq):
       A jq clone focussed on correctness, speed, and simplicity.
+    summary: |
+      A jq clone focussed on correctness, speed, and simplicity.
+
+      [jaq](https://github.com/01mf02/jaq)
     cmd: cargo install --force jaq
     generates:
       - "{{.BIN_DIR}}/jaq"
@@ -158,8 +188,11 @@ tasks:
 
   jf:
     desc: >
-      [jf](https://github.com/sayanarijit/jf):
       jf %q "JSON Formatted".
+    summary: |
+      jf %q "JSON Formatted".
+
+      [jf](https://github.com/sayanarijit/jf)
     cmd: cargo install --force jf
     generates:
       - "{{.BIN_DIR}}/jf"
@@ -171,8 +204,11 @@ tasks:
 
   presenterm:
     desc: >
-      [presenterm](https://github.com/mfontanini/presenterm)
       A markdown terminal slideshow tool.
+    summary: |
+      A markdown terminal slideshow tool.
+
+      [presenterm](https://github.com/mfontanini/presenterm)
     cmd: cargo install --force --locked presenterm
     generates:
       - "{{.BIN_DIR}}/presenterm"
@@ -184,8 +220,11 @@ tasks:
 
   tabiew:
     desc: >
-      [tabiew](https://github.com/shshemi/tabiew)
       A lightweight TUI application to view and query tabular data files, such as CSV, TSV, or parquet.
+    summary: |
+      A lightweight TUI application to view and query tabular data files, such as CSV, TSV, or parquet.
+
+      [tabiew](https://github.com/shshemi/tabiew)
     cmd: cargo install --force tabiew
     generates:
       - "{{.BIN_DIR}}/tw"
@@ -197,8 +236,11 @@ tasks:
 
   television:
     desc: >
-      [television](https://github.com/alexpasmantier/television):
       The revolution will (not) be televised.
+    summary: |
+      The revolution will (not) be televised.
+
+      [television](https://github.com/alexpasmantier/television)
     cmd: cargo install --locked television
     generates:
       - "{{.BIN_DIR}}/tv"
@@ -210,8 +252,11 @@ tasks:
 
   viddy:
     desc: >
-      [viddy](https://github.com/sachaos/viddy):
       👀 A modern watch command. Time machine and pager etc.
+    summary: |
+      👀 A modern watch command. Time machine and pager etc.
+
+      [viddy](https://github.com/sachaos/viddy)
     cmd: cargo install --force viddy
     generates:
       - "{{.BIN_DIR}}/viddy"
@@ -223,8 +268,11 @@ tasks:
 
   watchexec:
     desc: >
-      [watchexec](https://github.com/watchexec/watchexec):
       Executes commands in response to file modifications
+    summary: |
+      Executes commands in response to file modifications
+
+      [watchexec](https://github.com/watchexec/watchexec)
     cmd: cargo install --locked watchexec-cli
     generates:
       - "{{.BIN_DIR}}/watchexec"

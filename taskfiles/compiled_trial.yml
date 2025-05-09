@@ -18,8 +18,11 @@ tasks:
 
   ctags:
     desc: >
-      [ctags](https://github.com/universal-ctags/ctags):
       A maintained ctags implementation
+    summary: |
+      A maintained ctags implementation
+
+      [ctags](https://github.com/universal-ctags/ctags)
     cmds:
       - git clone --branch=v6.0.0 https://github.com/universal-ctags/ctags.git
       - defer: rm -fr ctags
@@ -42,9 +45,13 @@ tasks:
 
   duf:
     desc: >
-      NOTE: use go_extras:duf
-      [duf](https://github.com/muesli/duf_:
       Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
+      NOTE: use go_extras:duf
+    summary: |
+      NOTE: use go_extras:duf
+      Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
+
+      [duf](https://github.com/muesli/duf_:
     cmds:
       - git clone https://github.com/muesli/duf.git
       - defer: rm -fr duf
@@ -63,8 +70,11 @@ tasks:
 
   gh:
     desc: >
-      [gh](https://github.com/cli/cli):
       GitHub’s official command line tool.
+    summary: |
+      GitHub’s official command line tool.
+
+      [gh](https://github.com/cli/cli)
     cmds:
       - git clone https://github.com/cli/cli.git gh-cli
       - defer: rm -fr gh-cli
@@ -82,8 +92,11 @@ tasks:
 
   jo:
     desc: >
-      [jo](https://github.com/jpmens/jo):
       JSON output from a shell.
+    summary: |
+      JSON output from a shell.
+
+      [jo](https://github.com/jpmens/jo)
     cmds:
       - |
         curl \
@@ -112,9 +125,13 @@ tasks:
 
   lunarvim:
     desc: >
-      [LunarVim](https://github.com/LunarVim/LunarVim):
       🌙 LunarVim is an IDE layer for Neovim. Completely free and community
       driven.
+    summary: |
+      🌙 LunarVim is an IDE layer for Neovim. Completely free and community
+      driven.
+
+      [LunarVim](https://github.com/LunarVim/LunarVim)
     cmd: bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
     env:
       LV_BRANCH: "release-1.2/neovim-0.8"
@@ -127,9 +144,13 @@ tasks:
     aliases:
       - npm
     desc: >
-      [Node.js](https://nodejs.org/en):
       Node.js® is an open-source, cross-platform JavaScript runtime
       environment.
+    summary: |
+      Node.js® is an open-source, cross-platform JavaScript runtime
+      environment.
+
+      [Node.js](https://nodejs.org/en)
     cmds:
       - |
         curl \
@@ -158,8 +179,11 @@ tasks:
 
   nvim.alternate:
     desc: >
-      [neovim](https://github.com/neovim/neovim):
       Vim-fork focused on extensibility and usability.
+    summary: |
+      Vim-fork focused on extensibility and usability.
+
+      [neovim](https://github.com/neovim/neovim)
     cmds:
       - |
         curl \
@@ -174,9 +198,13 @@ tasks:
 
   pv:
     desc: >
-      [pv](https://github.com/a-j-wood/pv):
       a terminal-based tool for monitoring the progress of data through a
       pipeline.
+    summary: |
+      a terminal-based tool for monitoring the progress of data through a
+      pipeline.
+
+      [pv](https://github.com/a-j-wood/pv)
     cmds:
       - |
         curl \
@@ -203,8 +231,11 @@ tasks:
 
   vifm:
     desc: >
-      [vifm](https://github.com/vifm/vifm):
       Vim-like file manager.
+    summary: |
+      Vim-like file manager.
+
+      [vifm](https://github.com/vifm/vifm)
     cmds:
       - |
         curl \

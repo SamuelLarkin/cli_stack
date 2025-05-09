@@ -24,8 +24,11 @@ tasks:
 
   bat:
     desc: >
-      [bat](https://github.com/sharkdp/bat):
       A cat(1) clone with syntax highlighting and Git integration.
+    summary: |
+      A cat(1) clone with syntax highlighting and Git integration.
+
+      [bat](https://github.com/sharkdp/bat)
     cmd: cargo install --force bat
     generates:
       - "{{.BIN_DIR}}/bat"
@@ -37,11 +40,11 @@ tasks:
 
   delta:
     desc: >
-      [delta](https://github.com/dandavison/delta):
       A syntax-highlighting pager for git, diff, and grep output
-    summary: >
-      [delta](https://github.com/dandavison/delta):
+    summary: |
       A syntax-highlighting pager for git, diff, and grep output
+
+      [delta](https://github.com/dandavison/delta)
 
       ~/.gitconfig
 
@@ -70,9 +73,13 @@ tasks:
 
   difftastic:
     desc: >
-      [difftastic](https://github.com/Wilfred/difftastic):
       Difftastic is an experimental diff tool that compares files based on their
       syntax.
+    summary: |
+      Difftastic is an experimental diff tool that compares files based on their
+      syntax.
+
+      [difftastic](https://github.com/Wilfred/difftastic)
     cmd: cargo install --force difftastic
     generates:
       - "{{.BIN_DIR}}/difft"
@@ -84,11 +91,17 @@ tasks:
 
   hexyl:
     desc: >
-      [hexyl](https://github.com/sharkdp/hexyl):
       is a simple hex viewer for the terminal. It uses a colored output to
       distinguish different categories of bytes (NULL bytes, printable ASCII
       characters, ASCII whitespace characters, other ASCII characters and
       non-ASCII).
+    summary: |
+      hexyl is a simple hex viewer for the terminal. It uses a colored output to
+      distinguish different categories of bytes (NULL bytes, printable ASCII
+      characters, ASCII whitespace characters, other ASCII characters and
+      non-ASCII).
+
+      [hexyl](https://github.com/sharkdp/hexyl)
     cmd: cargo install --force hexyl
     generates:
       - "{{.BIN_DIR}}/hexyl"
@@ -100,8 +113,11 @@ tasks:
 
   hyperfine:
     desc: >
-      [hyperfine](https://github.com/sharkdp/hyperfine):
       A command-line benchmarking tool.
+    summary: |
+      A command-line benchmarking tool.
+
+      [hyperfine](https://github.com/sharkdp/hyperfine)
     cmd: cargo install --force hyperfine
     generates:
       - "{{.BIN_DIR}}/hyperfine"
@@ -113,11 +129,17 @@ tasks:
 
   jless:
     desc: >
-      [jless](https://github.com/PaulJuliusMartinez/jless):
       jless is a command-line JSON viewer. Use it as a replacement for whatever
       combination of less, jq, cat and your editor you currently use for viewing
       JSON files. It is written in Rust and can be installed as a single
       standalone binary.
+    summary: |
+      jless is a command-line JSON viewer. Use it as a replacement for whatever
+      combination of less, jq, cat and your editor you currently use for viewing
+      JSON files. It is written in Rust and can be installed as a single
+      standalone binary.
+
+      [jless](https://github.com/PaulJuliusMartinez/jless)
       [jless — a command-line JSON viewer](https://jless.io/user-guide.html)
     cmd: cargo install --force jless
     generates:
@@ -130,10 +152,15 @@ tasks:
 
   lsd:
     desc: >
-      [lsd (LSDeluxe)](https://github.com/Peltoche/lsd):
       This project is a rewrite of GNU ls with lot of added features like
       colors, icons, tree-view, more formatting options etc. The project is
       heavily inspired by the super colorls project.
+    summary: |
+      This project is a rewrite of GNU ls with lot of added features like
+      colors, icons, tree-view, more formatting options etc. The project is
+      heavily inspired by the super colorls project.
+
+      [lsd (LSDeluxe)](https://github.com/Peltoche/lsd)
     cmd: cargo install --force --locked lsd
     generates:
       - "{{.BIN_DIR}}/lsd"
@@ -148,8 +175,11 @@ tasks:
   # NOTE that we move the binary because it will conflict with the one in ~/.cargo/bin.
   reservoir_sampling:
     desc: >
-      [reservoir_sampling](https://github.com/SamuelLarkin/reservoir_sampling.rs):
       Reservoir Sampling in Rust.
+    summary: |
+      Reservoir Sampling in Rust.
+
+      [reservoir_sampling](https://github.com/SamuelLarkin/reservoir_sampling.rs)
     cmds:
       - cargo install --force --git https://github.com/SamuelLarkin/reservoir_sampling_rs
       - mv ~/.cargo/bin/reservoir_sampling_rs {{.BIN_DIR}}/reservoir_sampling_rs
@@ -163,13 +193,14 @@ tasks:
 
   starship:
     desc: >
-      [starship](https://github.com/starship/starship):
       ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any
       shell!
     summary: |
-      [starship](https://github.com/starship/starship):
       ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any
       shell!
+
+      [starship](https://github.com/starship/starship)
+
       eval "$(starship init bash)"
     cmd: cargo install --force starship
     generates:
@@ -182,8 +213,11 @@ tasks:
 
   stybulate:
     desc: >
-      [stybulate](https://github.com/guigui64/stybulate):
       Tabulate with Style
+    summary: |
+      Tabulate with Style
+
+      [stybulate](https://github.com/guigui64/stybulate)
     cmd: cargo install --force stybulate --features=cli
     generates:
       - "{{.BIN_DIR}}/stybulate"
@@ -195,15 +229,16 @@ tasks:
 
   zoxide:
     desc: >
-      [zoxide](https://github.com/ajeetdsouza/zoxide):
       zoxide is a smarter cd command, inspired by z and autojump.
       It remembers which directories you use most frequently, so you can "jump"
       to them in just a few keystrokes.  zoxide works on all major shells.
     summary: |
-      [zoxide](https://github.com/ajeetdsouza/zoxide):
       zoxide is a smarter cd command, inspired by z and autojump.
       It remembers which directories you use most frequently, so you can "jump"
       to them in just a few keystrokes.  zoxide works on all major shells.
+
+      [zoxide](https://github.com/ajeetdsouza/zoxide)
+
       `eval "$(zoxide init bash)"`
     cmd: cargo install --force zoxide
     generates:

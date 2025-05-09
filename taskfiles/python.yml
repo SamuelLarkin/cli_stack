@@ -14,7 +14,11 @@ tasks:
 
   bpytop:
     desc: >
-      [bpytop](https://github.com/aristocratos/bpytop):
+      Linux/OSX/FreeBSD resource monitor.
+    summary: |
+      Linux/OSX/FreeBSD resource monitor.
+
+      [bpytop](https://github.com/aristocratos/bpytop)
     cmd: python3 -m pip install --user bpytop
     generates:
       - "{{.BIN_DIR}}/bpytop"
@@ -23,9 +27,12 @@ tasks:
 
   glances:
     desc: >
-      [glances](https://github.com/nicolargo/glances):
-      [glances - WebSite](https://nicolargo.github.io/glances):
       An eye on your system.
+    summary: |
+      An eye on your system.
+
+      [glances](https://github.com/nicolargo/glances)
+      [glances - WebSite](https://nicolargo.github.io/glances)
     cmd: python3 -m pip install --user --upgrade glances
     generates:
       - "{{.BIN_DIR}}/glances"
@@ -34,8 +41,11 @@ tasks:
 
   hapless:
     desc: >
-      [hapless](https://github.com/bmwant/hapless):
       Simplest way of running and tracking processes in the background.
+    summary: |
+      Simplest way of running and tracking processes in the background.
+
+      [hapless](https://github.com/bmwant/hapless)
     cmd: python3 -m pip install --user --upgrade hapless
     generates:
       - "{{.BIN_DIR}}/hapless"
@@ -44,9 +54,12 @@ tasks:
 
   histogram:
     desc: >
-      [histogram.py](https://github.com/bitly/data_hacks) the original:
-      [histogram.py](https://github.com/nicholasren/data_hacks3) the python3 version:
       Command line utilities for data analysis.
+    summary: |
+      Command line utilities for data analysis.
+
+      [histogram.py](https://github.com/nicholasren/data_hacks3) the python3 version
+      [histogram.py](https://github.com/bitly/data_hacks) the original
     #cmd: python3 -m pip install --user --upgrade data_hacks   # Only works with python2
     cmd: python3 -m pip install --user --upgrade data_hacks3
     generates:
@@ -56,8 +69,11 @@ tasks:
 
   hq:
     desc: >
-      [hq](https://github.com/rbwinslow/hq):
       Powerful HTML slicing and dicing at the command line.
+    summary: |
+      Powerful HTML slicing and dicing at the command line.
+
+      [hq](https://github.com/rbwinslow/hq)
     cmd: python3 -m pip install --user --upgrade hq
     generates:
       - "{{.BIN_DIR}}/hq"
@@ -66,11 +82,17 @@ tasks:
 
   rich-cli:
     desc: >
-      [Rich CLI](https://github.com/Textualize/rich-cli):
       Rich-cli is a command line toolbox for fancy output in the terminal, built
       with Rich.  Use the rich command to highlight a variety of file types in
       the terminal, with specialized rendering for Markdown and JSON files.
       Additionally you can markup and format text from the command line.
+    summary: |
+      Rich-cli is a command line toolbox for fancy output in the terminal, built
+      with Rich.  Use the rich command to highlight a variety of file types in
+      the terminal, with specialized rendering for Markdown and JSON files.
+      Additionally you can markup and format text from the command line.
+
+      [Rich CLI](https://github.com/Textualize/rich-cli)
     cmd: python3 -m pip install --user --upgrade rich-cli
     generates:
       - "{{.BIN_DIR}}/rich-cli"
@@ -79,8 +101,11 @@ tasks:
 
   scroll-term:
     desc: >
-      [scroll](https://github.com/redraw/scroll):
       scroll stdout!
+    summary: |
+      scroll stdout!
+
+      [scroll](https://github.com/redraw/scroll)
     cmd: python3 -m pip install --user --upgrade scroll-term
     generates:
       - "{{.BIN_DIR}}/scroll-term"
@@ -89,8 +114,11 @@ tasks:
 
   tabulate:
     desc: >
-      [tabulate - python-tabulate](https://github.com/astanin/python-tabulate):
       Pretty-print tabular data in Python, a library and a command-line utility.
+    summary: |
+      Pretty-print tabular data in Python, a library and a command-line utility.
+
+      [tabulate - python-tabulate](https://github.com/astanin/python-tabulate)
     cmd: python3 -m pip install --user --upgrade tabulate
     generates:
       - "{{.BIN_DIR}}/tabulate"
@@ -99,10 +127,15 @@ tasks:
 
   tldr:
     desc: >
-      [tldr-pages](https://github.com/tldr-pages/tldr):
       The tldr-pages project is a collection of community-maintained help pages
       for command-line tools, that aims to be a simpler, more approachable
       complement to traditional man pages.
+    summary: |
+      The tldr-pages project is a collection of community-maintained help pages
+      for command-line tools, that aims to be a simpler, more approachable
+      complement to traditional man pages.
+
+      [tldr-pages](https://github.com/tldr-pages/tldr)
     cmd: python3 -m pip install --user --upgrade tldr
     generates:
       - "{{.BIN_DIR}}/tldr"
@@ -111,8 +144,11 @@ tasks:
 
   tmuxp:
     desc: >
-      [tmuxp](https://github.com/tmux-python/tmuxp):
       tmuxp, tmux session manager.
+    summary: |
+      tmuxp, tmux session manager.
+
+      [tmuxp](https://github.com/tmux-python/tmuxp)
     cmd: python3 -m pip install --user --upgrade tmuxp
     generates:
       - "{{.BIN_DIR}}/tmuxp"
@@ -121,8 +157,11 @@ tasks:
 
   tqdm:
     desc: >
-      [tqdm](https://github.com/tqdm/tqdm):
       Progress Bar.
+    summary: |
+      Progress Bar.
+
+      [tqdm](https://github.com/tqdm/tqdm)
     cmd: python3 -m pip install --user --upgrade tqdm
     generates:
       - "{{.BIN_DIR}}/tqdm"
@@ -131,8 +170,11 @@ tasks:
 
   xq:
     desc: >
-      [xq](https://github.com/jeffbr13/xq):
       Apply XPath expressions to XML, like jq does for JSONPath and JSON.
+    summary: |
+      Apply XPath expressions to XML, like jq does for JSONPath and JSON.
+
+      [xq](https://github.com/jeffbr13/xq)
     cmd: python3 -m pip install --user --upgrade xq
     generates:
       - "{{.BIN_DIR}}/xq"
@@ -141,9 +183,13 @@ tasks:
 
   yq:
     desc: >
-      [yq](https://github.com/kislyuk/yq):
       yq: Command-line YAML/XML/TOML processor - jq wrapper for YAML, XML, TOML
       documents.
+    summary: |
+      yq: Command-line YAML/XML/TOML processor - jq wrapper for YAML, XML, TOML
+      documents.
+
+      [yq](https://github.com/kislyuk/yq)
     cmd: python3 -m pip install --user --upgrade yq
     generates:
       - "{{.BIN_DIR}}/yq"
@@ -152,8 +198,11 @@ tasks:
 
   visidata:
     desc: >
-      [visidata](https://github.com/saulpw/visidata):
       A terminal spreadsheet multitool for discovering and arranging data.
+    summary: |
+      A terminal spreadsheet multitool for discovering and arranging data.
+
+      [visidata](https://github.com/saulpw/visidata)
     cmds:
       - python -m venv venv_visidata
       - defer: rm -fr venv_visidata
@@ -170,8 +219,11 @@ tasks:
 
   uv:
     desc: >
-      [uv](https://github.com/astral-sh/uv):
       An extremely fast Python package and project manager, written in Rust.
+    summary: |
+      An extremely fast Python package and project manager, written in Rust.
+
+      [uv](https://github.com/astral-sh/uv)
       [doc](https://docs.astral.sh/uv)
     cmd: curl -LsSf https://astral.sh/uv/install.sh | sh
     #cmd: curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="{{.INSTALL_DIR}}" sh

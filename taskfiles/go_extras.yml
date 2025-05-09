@@ -24,9 +24,13 @@ tasks:
 
   archiver:
     desc: >
-      [archiver](https://github.com/mholt/archiver):
       Easily create & extract archives, and compress & decompress files of
       various formats.
+    summary: |
+      Easily create & extract archives, and compress & decompress files of
+      various formats.
+
+      [archiver](https://github.com/mholt/archiver)
     cmd: go install github.com/mholt/archiver/v3/cmd/arc@latest
     generates:
       - "{{.GOBIN}}/arc"
@@ -38,7 +42,11 @@ tasks:
 
   direnv:
     desc: >
-      [direnv – Documentation](https://direnv.net/): unclutter your .profile
+      Unclutter your .profile.
+    summary: |
+      Unclutter your .profile.
+
+      [direnv – Documentation](https://direnv.net/)
       [direnv](https://github.com/direnv/direnv)
     summray: >
       eval "$(direnv hook bash)"
@@ -53,8 +61,11 @@ tasks:
 
   duf:
     desc: >
-      [duf](https://github.com/muesli/duf):
       Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
+    summary: |
+      Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
+
+      [duf](https://github.com/muesli/duf)
     cmd: go install github.com/muesli/duf@latest
     generates:
       - "{{.GOBIN}}/duf"
@@ -66,9 +77,13 @@ tasks:
 
   f2:
     desc: >
-      [F2](https://github.com/ayoisaiah/f2):
       F2 is a cross-platform command-line tool for batch renaming files and
       directories quickly and safely. Written in Go!
+    summary: |
+      F2 is a cross-platform command-line tool for batch renaming files and
+      directories quickly and safely. Written in Go!
+
+      [F2](https://github.com/ayoisaiah/f2)
     cmd: go install github.com/ayoisaiah/f2/cmd/f2@latest
     generates:
       - "{{.GOBIN}}/f2"
@@ -80,10 +95,14 @@ tasks:
 
   gojq:
     desc: >
-      [gojq](Pure Go implementation of jq):
       Pure Go implementation of jq.
+    summary: |
+      Pure Go implementation of jq.
+
       This is an implementation of jq command written in Go language. You can
       also embed gojq as a library to your Go products.
+
+      [gojq](Pure Go implementation of jq)
     cmd: go install github.com/itchyny/gojq/cmd/gojq@latest
     generates:
       - "{{.GOBIN}}/gojq"
@@ -95,8 +114,11 @@ tasks:
 
   gotz:
     desc: >
-      [gotz](https://github.com/merschformann/gotz):
       gotz - a simple CLI timezone info tool.
+    summary: |
+      gotz - a simple CLI timezone info tool.
+
+      [gotz](https://github.com/merschformann/gotz)
     cmd: go install github.com/merschformann/gotz@latest
     generates:
       - "{{.GOBIN}}/gotz"
@@ -108,8 +130,11 @@ tasks:
 
   grv:
     desc: >
-      [grv](https://github.com/rgburke/grv)
       GRV is a terminal interface for viewing git repositories.
+    summary: |
+      GRV is a terminal interface for viewing git repositories.
+
+      [grv](https://github.com/rgburke/grv)
     cmds:
       - |
         curl \
@@ -127,8 +152,11 @@ tasks:
 
   jid:
     desc: >
-      [jid](https://github.com/simeji/jid)
       json incremental digger.
+    summary: |
+      json incremental digger.
+
+      [jid](https://github.com/simeji/jid)
     cmd: go install github.com/simeji/jid/cmd/jid@latest
     generates:
       - "{{.GOBIN}}/jid"
@@ -140,8 +168,11 @@ tasks:
 
   jpq:
     desc: >
-      [jqp](https://github.com/noahgorstein/jqp)
       A TUI playground to experiment with jq.
+    summary: |
+      A TUI playground to experiment with jq.
+
+      [jqp](https://github.com/noahgorstein/jqp)
     cmd: go install github.com/noahgorstein/jqp@latest
     generates:
       - "{{.GOBIN}}/jpq"
@@ -153,9 +184,13 @@ tasks:
 
   lazydocker:
     desc: >
-      [lazydocker](https://github.com/jesseduffield/lazydocker):
       A simple terminal UI for both docker and docker-compose, written in Go
       with the gocui library.
+    summary: |
+      A simple terminal UI for both docker and docker-compose, written in Go
+      with the gocui library.
+
+      [lazydocker](https://github.com/jesseduffield/lazydocker)
     cmd: go install github.com/jesseduffield/lazydocker@latest
     generates:
       - "{{.GOBIN}}/lazydocker"
@@ -167,9 +202,13 @@ tasks:
 
   lf:
     desc: >
-      [lf](https://github.com/gokcehan/lf):
       lf (as in "list files") is a terminal file manager written in Go with a
       heavy inspiration from ranger file manager.
+    summary: |
+      lf (as in "list files") is a terminal file manager written in Go with a
+      heavy inspiration from ranger file manager.
+
+      [lf](https://github.com/gokcehan/lf)
     cmd: CGO_ENABLED=0  go install -ldflags="-s -w" github.com/gokcehan/lf@latest
     generates:
       - "{{.GOBIN}}/lf"
@@ -181,9 +220,13 @@ tasks:
 
   miller:
     desc: >
-      [Miller](https://github.com/johnkerl/miller):
       Miller is like awk, sed, cut, join, and sort for data formats such as
       CSV, TSV, JSON, JSON Lines, and positionally-indexed.
+    summary: |
+      Miller is like awk, sed, cut, join, and sort for data formats such as
+      CSV, TSV, JSON, JSON Lines, and positionally-indexed.
+
+      [Miller](https://github.com/johnkerl/miller)
     #cmd: go install github.com/johnkerl/miller/cmd/mlr@latest
     cmds:
       - |
@@ -209,8 +252,11 @@ tasks:
 
   up:
     desc: >
-      [up](https://github.com/akavel/up)
       Ultimate Plumber is a tool for writing Linux pipes with instant live preview.
+    summary: |
+      Ultimate Plumber is a tool for writing Linux pipes with instant live preview.
+
+      [up](https://github.com/akavel/up)
     cmd: go install github.com/akavel/up@latest
     generates:
       - "{{.GOBIN}}/up"
@@ -222,9 +268,13 @@ tasks:
 
   yq:
     desc: >
-      [yq](https://github.com/mikefarah/yq):
       A lightweight and portable command-line YAML, JSON and XML processor.
       yq uses jq like syntax but works with yaml files as well as json and xml.
+    summary: |
+      A lightweight and portable command-line YAML, JSON and XML processor.
+      yq uses jq like syntax but works with yaml files as well as json and xml.
+
+      [yq](https://github.com/mikefarah/yq)
     cmd: go install github.com/mikefarah/yq/v4@latest
     generates:
       - "{{.GOBIN}}/yq"

@@ -7,6 +7,9 @@ tasks:
 
   rename:
     desc: >
-      [rename](https://metacpan.org/dist/File-Rename/view/rename.PL):
       Cpan File::Rename.
+    summary: |
+      Cpan File::Rename.
+
+      [rename](https://metacpan.org/dist/File-Rename/view/rename.PL)
     cmd: cpan install File::Rename

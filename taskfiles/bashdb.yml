@@ -11,9 +11,13 @@ tasks:
 
   bashdb:
     desc: >
-      [bashdb](https://bashdb.sourceforge.net/):
       The Bash Debugger Project is a source-code debugger for bash that follows
       the gdb command syntax.
+    summary: |
+      The Bash Debugger Project is a source-code debugger for bash that follows
+      the gdb command syntax.
+
+      [bashdb](https://bashdb.sourceforge.net/)
     dir: $HOME/tmp
     cmds:
       - |

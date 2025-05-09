@@ -14,8 +14,11 @@ tasks:
 
   fx:
     desc: >
-      [fx](https://github.com/antonmedv/fx?tab=readme-ov-file):
       Terminal JSON viewer & processor.
+    summary: |
+      Terminal JSON viewer & processor.
+
+      [fx](https://github.com/antonmedv/fx)
       [fx - Documentation](https://fx.wtf)
     cmd: go install github.com/antonmedv/fx@latest
     generates:
@@ -28,8 +31,11 @@ tasks:
 
   lazysql:
     desc: >
-      [lazysql](https://github.com/jorgerojas26/lazysql):
       A cross-platform TUI database management tool written in Go.
+    summary: |
+      A cross-platform TUI database management tool written in Go.
+
+      [lazysql](https://github.com/jorgerojas26/lazysql)
     cmd: go install github.com/jorgerojas26/lazysql@latest
     generates:
       - "{{.GOBIN}}/lazysql"
@@ -41,8 +47,11 @@ tasks:
 
   nap:
     desc: >
-      [nap](https://github.com/maaslalani/nap):
       Code snippets in your terminal.
+    summary: |
+      Code snippets in your terminal.
+
+      [nap](https://github.com/maaslalani/nap)
     cmd: go install github.com/maaslalani/nap@main
     generates:
       - "{{.GOBIN}}/nap"
@@ -54,8 +63,11 @@ tasks:
 
   viddy:
     desc: >
-      [viddy](https://github.com/sachaos/viddy):
       👀 A modern watch command. Time machine and pager etc.
+    summary: |
+      👀 A modern watch command. Time machine and pager etc.
+
+      [viddy](https://github.com/sachaos/viddy)
     cmd: go install github.com/sachaos/viddy@v0.4.0
     generates:
       - "{{.GOBIN}}/viddy"

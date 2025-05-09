@@ -13,6 +13,12 @@ tasks:
       - git_prompt
 
   git-filter-repo:
+    desc: >
+      Quickly rewrite git repository history (filter-branch replacement)
+    summary: |
+      Quickly rewrite git repository history (filter-branch replacement)
+
+      [git-filter-repo](https://github.com/newren/git-filter-repo)
     cmds:
       - |
         curl \
@@ -22,6 +28,10 @@ tasks:
       - chmod u+x {{.BIN_DIR}}/git-filter-repo
 
   git_completion:
+    desc: >
+      Git's CLI completion
+    summary: |
+      Git's CLI completion
     cmd: |
       curl \
         --create-dirs --fail --location \
@@ -29,6 +39,10 @@ tasks:
         'https://raw.githubusercontent.com/git/git/master/contrib/completion/{git-completion.bash}'
 
   git_prompt:
+    desc: >
+      Git's prompt. Are we actually using this or starship completely replaces this?
+    summary: |
+      Git's prompt. Are we actually using this or starship completely replaces this?
     cmd: |
       curl \
         --create-dirs --fail --location \

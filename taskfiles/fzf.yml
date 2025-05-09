@@ -17,8 +17,11 @@ tasks:
 
   forgit:
     desc: >
-      [forgit](https://github.com/wfxr/forgit):
       A utility tool powered by fzf for using git interactively.
+    summary: |
+      A utility tool powered by fzf for using git interactively.
+
+      [forgit](https://github.com/wfxr/forgit)
     cmds:
       - |
         curl \
@@ -39,8 +42,11 @@ tasks:
 
   fzf:
     desc: >
-      [fzf](https://github.com/junegunn/fzf):
       fzf is a general-purpose command-line fuzzy finder.
+    summary: |
+      fzf is a general-purpose command-line fuzzy finder.
+
+      [fzf](https://github.com/junegunn/fzf)
     cmd: go install github.com/junegunn/fzf@latest
     generates:
       - "{{.BIN_DIR}}/fzf"
@@ -49,8 +55,11 @@ tasks:
 
   fzf-git:
     desc: >
-      [fzf-git.sh](https://github.com/junegunn/fzf-git.sh):
       bash and zsh key bindings for Git objects, powered by fzf
+    summary: |
+      bash and zsh key bindings for Git objects, powered by fzf
+
+      [fzf-git.sh](https://github.com/junegunn/fzf-git.sh)
     deps:
       - fzf
     cmd: |
@@ -65,6 +74,9 @@ tasks:
 
   fzf-tmux:
     desc: >
+      Install fzf's integration with tmux.
+      fzf-tmux: starts fzf in a tmux pane.
+    summary: |
       Install fzf's integration with tmux.
       fzf-tmux: starts fzf in a tmux pane.
     deps:
@@ -83,6 +95,10 @@ tasks:
 
   tmux-fzf:
     desc: >
-      NOTE: This plugin is intalled in `.tmux.conf` with `set -g @plugin 'sainnhe/tmux-fzf'`.
-      [tmux-fzf](https://github.com/sainnhe/tmux-fzf):
       Use fzf to manage your tmux work environment!
+      NOTE: This plugin is intalled in `.tmux.conf` with `set -g @plugin 'sainnhe/tmux-fzf'`.
+    summary: |
+      Use fzf to manage your tmux work environment!
+      NOTE: This plugin is intalled in `.tmux.conf` with `set -g @plugin 'sainnhe/tmux-fzf'`.
+
+      [tmux-fzf](https://github.com/sainnhe/tmux-fzf)

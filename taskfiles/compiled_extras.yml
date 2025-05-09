@@ -12,6 +12,8 @@ tasks:
 
   gh:
     desc: >
+      GitHub CLI tools.
+    summary: |
       [Install from Source](https://github.com/cli/cli/blob/trunk/docs/source.md)
     cmds:
       - git clone https://github.com/cli/cli.git gh-cli
@@ -30,8 +32,11 @@ tasks:
 
   ncdu:
     desc: >
-      [ncdu](https://dev.yorhel.nl/ncdu):
       NCurses Disk Usage.
+    summary: |
+      NCurses Disk Usage.
+
+      [ncdu](https://dev.yorhel.nl/ncdu)
     cmds:
       - |
         curl \

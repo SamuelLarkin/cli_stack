@@ -18,8 +18,11 @@ tasks:
 
   htop:
     desc: >
-      [htop](https://github.com/htop-dev/htop):
-      is a cross-platform interactive process viewer.
+      htop is a cross-platform interactive process viewer.
+    summary: |
+      htop is a cross-platform interactive process viewer.
+
+      [htop](https://github.com/htop-dev/htop)
     cmds:
       - |
         curl \
@@ -47,8 +50,12 @@ tasks:
 
   hyperfine:
     desc: >
-      [hyperfine](https://github.com/sharkdp/hyperfine):
       A command-line benchmarking tool.
+    summary: |
+      A command-line benchmarking tool.
+
+      [hyperfine](https://github.com/sharkdp/hyperfine)
+
       NOTE: probably already install by `cargo install hyperfine`.
     cmds:
       - |
@@ -70,8 +77,12 @@ tasks:
 
   jq:
     desc: >
-      [jq](https://stedolan.github.io/jq/): jq is a lightweight and flexible command-line JSON processor.
-      [jq - doc](https://github.com/stedolan/jq): jq is a lightweight and flexible command-line JSON processor.
+      jq is a lightweight and flexible command-line JSON processor.
+    summary: |
+      jq is a lightweight and flexible command-line JSON processor.
+
+      [jq](https://stedolan.github.io/jq/)
+      [jq - doc](https://github.com/stedolan/jq)
     cmds:
       - |
         curl \
@@ -88,8 +99,12 @@ tasks:
 
   jq_build:
     desc: >
-      [jq](https://stedolan.github.io/jq/): jq is a lightweight and flexible command-line JSON processor.
-      [jq - doc](https://github.com/stedolan/jq): jq is a lightweight and flexible command-line JSON processor.
+      jq is a lightweight and flexible command-line JSON processor.
+    summary: |
+      jq is a lightweight and flexible command-line JSON processor.
+
+      [jq](https://stedolan.github.io/jq/)
+      [jq - doc](https://github.com/stedolan/jq)
     cmds:
       - |
         curl \
@@ -118,8 +133,11 @@ tasks:
 
   nvim:
     desc: >
-      [neovim](https://github.com/neovim/neovim):
       Vim-fork focused on extensibility and usability.
+    summary: |
+      Vim-fork focused on extensibility and usability.
+
+      [neovim](https://github.com/neovim/neovim)
     cmds:
       - git clone --branch $VERSION https://github.com/neovim/neovim.git
       - defer: rm -fr neovim
@@ -140,8 +158,11 @@ tasks:
 
   parallel:
     desc: >
-      [parallel - GNU parallel](https://www.gnu.org/software/parallel/):
-      is a shell tool for executing jobs in parallel using one or more computers.
+      parallel is a shell tool for executing jobs in parallel using one or more computers.
+    summary: |
+      parallel is a shell tool for executing jobs in parallel using one or more computers.
+
+      [parallel - GNU parallel](https://www.gnu.org/software/parallel/)
     cmds:
       - |
         curl \
@@ -168,8 +189,11 @@ tasks:
 
   tig:
     desc: >
-      [tig](https://github.com/jonas/tig):
       Text-mode interface for git
+    summary: |
+      Text-mode interface for git
+
+      [tig](https://github.com/jonas/tig)
     cmds:
       - |
         curl \
@@ -208,8 +232,11 @@ tasks:
 
   ugrep:
     desc: >
-      [ug/ugrep](https://github.com/Genivia/ugrep):
       Search for anything in everything... ultra fast.
+    summary: |
+      Search for anything in everything... ultra fast.
+
+      [ug/ugrep](https://github.com/Genivia/ugrep)
     cmds:
       - |
         curl \

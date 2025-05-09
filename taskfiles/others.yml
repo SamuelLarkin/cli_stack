@@ -14,9 +14,13 @@ tasks:
 
   ollama:
     desc: >
-      [oLLaMa](https://github.com/ollama/ollama):
       Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.
+    summary: |
+      Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.
+
       Note: we can't simply to `go install github.com/ollama/ollama@latest` or we won't get the GPU speed up libraries.
+
+      [oLLaMa](https://github.com/ollama/ollama)
     cmds:
       - |
         curl \
@@ -35,8 +39,15 @@ tasks:
 
   xidel:
     desc: >
-      [forgit](https://github.com/wfxr/forgit):
-      A utility tool powered by fzf for using git interactively.
+      Command line tool to download and extract data from HTML/XML pages or
+      JSON-APIs, using CSS, XPath 3.0, XQuery 3.0, JSONiq or pattern matching.
+      It can also create new or transformed XML/HTML/JSON documents.
+    summary: |
+      Command line tool to download and extract data from HTML/XML pages or
+      JSON-APIs, using CSS, XPath 3.0, XQuery 3.0, JSONiq or pattern matching.
+      It can also create new or transformed XML/HTML/JSON documents.
+
+      [xidel](https://github.com/benibela/xidel)
     cmds:
       - |
         curl \

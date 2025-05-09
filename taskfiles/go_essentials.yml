@@ -14,8 +14,11 @@ tasks:
 
   chezmoi:
     desc: >
-      [chezmoi](https://github.com/twpayne/chezmoi):
       Manage your dotfiles across multiple diverse machines, securely.
+    summary: |
+      Manage your dotfiles across multiple diverse machines, securely.
+
+      [chezmoi](https://github.com/twpayne/chezmoi)
       [ChezMoi - Documentation](https://www.chezmoi.io/)
     cmd: go install github.com/twpayne/chezmoi@latest
     generates:
@@ -28,8 +31,11 @@ tasks:
 
   gdu:
     desc: >
-      [go DiskUsage(gdu)](https://github.com/dundee/gdu):
       Pretty fast disk usage analyzer written in Go.
+    summary: |
+      Pretty fast disk usage analyzer written in Go.
+
+      [go DiskUsage(gdu)](https://github.com/dundee/gdu)
     cmd: go install github.com/dundee/gdu/v5/cmd/gdu@latest
     generates:
       - "{{.GOBIN}}/gdu"
@@ -41,8 +47,11 @@ tasks:
 
   glow:
     desc: >
-      [Glow](https://github.com/charmbracelet/glow):
       Render markdown on the CLI, with pizzazz!
+    summary: |
+      Render markdown on the CLI, with pizzazz!
+
+      [Glow](https://github.com/charmbracelet/glow)
     cmd: go install github.com/charmbracelet/glow@latest
     generates:
       - "{{.GOBIN}}/glow"
@@ -54,9 +63,13 @@ tasks:
 
   lazygit:
     desc: >
-      [lazygit](https://github.com/jesseduffield/lazygit):
       A simple terminal UI for git commands, written in Go with the gocui
       library.
+    summary: |
+      A simple terminal UI for git commands, written in Go with the gocui
+      library.
+
+      [lazygit](https://github.com/jesseduffield/lazygit)
     cmd: go install github.com/jesseduffield/lazygit@latest
     generates:
       - "{{.GOBIN}}/lazygit"

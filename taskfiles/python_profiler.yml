@@ -13,9 +13,13 @@ tasks:
 
   py-spy:
     desc: >
-      [py-spy](https://github.com/benfred/py-spy):
       py-spy: Sampling profiler for Python programs
       py-spy top -- python myprogram.py
+    summary: |
+      py-spy: Sampling profiler for Python programs
+      py-spy top -- python myprogram.py
+
+      [py-spy](https://github.com/benfred/py-spy)
     cmd: python3 -m pip install --user --upgrade py-spy
     generates:
       - "{{.BIN_DIR}}/py-spy"
@@ -24,8 +28,11 @@ tasks:
 
   pyinstrument:
     desc: >
-      [Pyinstrument](https://github.com/joerick/pyinstrument):
       Pyinstrument is a Python profiler.
+    summary: |
+      Pyinstrument is a Python profiler.
+
+      [Pyinstrument](https://github.com/joerick/pyinstrument)
     cmd: python3 -m pip install --user --upgrade pyinstrument
     generates:
       - "{{.BIN_DIR}}/pyinstrument"
