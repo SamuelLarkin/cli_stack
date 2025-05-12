@@ -16,6 +16,7 @@ tasks:
       - diffsitter
       - eza
       - git-graph
+      - git-igitt
       - grex
       - helix
       - jaq
@@ -141,6 +142,22 @@ tasks:
       - "{{.BIN_DIR}}/git-graph"
     status:
       - which git-graph
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  git-igitt:
+    desc: >
+      Interactive, cross-platform Git terminal application with clear git graphs arranged for your branching model.
+    summary: |
+      Interactive, cross-platform Git terminal application with clear git graphs arranged for your branching model.
+
+      [git-igitt](https://github.com/mlange-42/git-igitt)
+    cmd: cargo install git-igitt
+    generates:
+      - "{{.BIN_DIR}}/git-igitt"
+    status:
+      - which git-igitt
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
