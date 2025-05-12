@@ -22,6 +22,7 @@ tasks:
       - jaq
       - jf
       - presenterm
+      - serie
       - tabiew
       - television
       - viddy
@@ -248,6 +249,22 @@ tasks:
       - "{{.BIN_DIR}}/presenterm"
     status:
       - which presenterm
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  serie:
+    desc: >
+      A rich git commit graph in your terminal, like magic 📚.
+    summary: |
+      A rich git commit graph in your terminal, like magic 📚.
+
+      [serie](https://github.com/lusingander/serie)
+    cmd: cargo install --locked serie
+    generates:
+      - "{{.BIN_DIR}}/serie"
+    status:
+      - which serie
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
