@@ -15,6 +15,7 @@ tasks:
       - binsider
       - diffsitter
       - eza
+      - git-graph
       - grex
       - helix
       - jaq
@@ -124,6 +125,22 @@ tasks:
       - "{{.BIN_DIR}}/eza"
     status:
       - which eza
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  git-graph:
+    desc: >
+      Command line tool to show clear git graphs arranged for your branching model.
+    summary: |
+      Command line tool to show clear git graphs arranged for your branching model.
+
+      [git-graph](https://github.com/mlange-42/git-graph)
+    cmd: cargo install git-graph
+    generates:
+      - "{{.BIN_DIR}}/git-graph"
+    status:
+      - which git-graph
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
