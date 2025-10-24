@@ -221,7 +221,7 @@ tasks:
     dir: "{{.HOME}}/tmp"
     env:
       CONFIG_DIR: "{{.HOME}}/.config/tig"
-      VERSION: 2.5.8
+      VERSION: 2.6.0
     generates:
       - "{{.BIN_DIR}}/bin/tig"
     status:
