@@ -39,7 +39,7 @@ tasks:
         \make -j $(nproc) install
     dir: $HOME/tmp
     env:
-      VERSION: 3.2.2
+      VERSION: 3.4.1
     generates:
       - "{{.BIN_DIR}}/htop"
     status:
