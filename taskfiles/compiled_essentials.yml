@@ -91,7 +91,7 @@ tasks:
           "https://github.com/jqlang/jq/releases/download/jq-$VERSION/jq-linux-amd64"
       - chmod u+x "{{.BIN_DIR}}/jq"
     env:
-      VERSION: 1.7
+      VERSION: 1.8.1
     generates:
       - "{{.BIN_DIR}}/jq"
     status:
