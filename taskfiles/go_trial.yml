@@ -8,6 +8,7 @@ tasks:
   default:
     deps:
       - fx
+      - ijq
       - lazysql
       - nap
       - viddy
@@ -25,6 +26,22 @@ tasks:
       - "{{.GOBIN}}/fx"
     status:
       - which fx
+    preconditions:
+      - msg: "Go must be in your $PATH"
+        sh: which go
+
+  ijq:
+    desc: >
+      Interactive jq.
+    summary: |
+      Interactive jq.
+
+      [ijq](https://github.com/gpanders/ijq)
+    cmd: go install github.com/gpanders/ijq@latest
+    generates:
+      - "{{.GOBIN}}/ijq"
+    status:
+      - which ijq
     preconditions:
       - msg: "Go must be in your $PATH"
         sh: which go
