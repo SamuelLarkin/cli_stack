@@ -252,7 +252,7 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
-      VERSION: 4.0.5
+      VERSION: 7.5.0
     generates:
       - "{{.BIN_DIR}}/ugrep"
     status:
