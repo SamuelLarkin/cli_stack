@@ -178,7 +178,7 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
-      VERSION: 20231022
+      VERSION: 20250922
     generates:
       - "{{.BIN_DIR}}/parallel"
     status:
