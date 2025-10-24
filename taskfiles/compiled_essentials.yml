@@ -69,7 +69,7 @@ tasks:
       - cp hyperfine-v$VERSION-x86_64-unknown-linux-musl/hyperfine "{{.BIN_DIR}}"
     dir: "{{.HOME}}/tmp"
     env:
-      VERSION: 1.12.0
+      VERSION: 1.19.0
     generates:
       - "{{.BIN_DIR}}/hyperfine"
     status:
