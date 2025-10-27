@@ -15,7 +15,6 @@ tasks:
       - difftastic
       - hexyl
       - hyperfine
-      - jless
       - lsd
       - reservoir_sampling
       - starship
@@ -123,29 +122,6 @@ tasks:
       - "{{.BIN_DIR}}/hyperfine"
     status:
       - which hyperfine
-    preconditions:
-      - msg: "cargo must be in your $PATH"
-        sh: which cargo
-
-  jless:
-    desc: >
-      jless is a command-line JSON viewer. Use it as a replacement for whatever
-      combination of less, jq, cat and your editor you currently use for viewing
-      JSON files. It is written in Rust and can be installed as a single
-      standalone binary.
-    summary: |
-      jless is a command-line JSON viewer. Use it as a replacement for whatever
-      combination of less, jq, cat and your editor you currently use for viewing
-      JSON files. It is written in Rust and can be installed as a single
-      standalone binary.
-
-      [jless](https://github.com/PaulJuliusMartinez/jless)
-      [jless — a command-line JSON viewer](https://jless.io/user-guide.html)
-    cmd: cargo install --force jless
-    generates:
-      - "{{.BIN_DIR}}/jless"
-    status:
-      - which jless
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
