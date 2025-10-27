@@ -108,6 +108,3 @@ tasks:
       - "{{.GOBIN}}/mlr"
     status:
       - which mlr
-    preconditions:
-      - msg: "Go must be in your $PATH"
-        sh: which go
