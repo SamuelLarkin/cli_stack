@@ -33,12 +33,12 @@ tasks:
           --create-dirs --fail --location \
           --output {{.BASH_COMPLETION_D}}/'#1' \
           'https://raw.githubusercontent.com/wfxr/forgit/refs/heads/main/completions/{git-forgit}.bash'
-      - chmod u+x {{.BIN_DIR}}/fzf-tmux
+      - chmod u+x {{.BIN_DIR}}/git-forgit
     generates:
       - "{{.BIN_DIR}}/forgit"
       - "{{.BASH_COMPLETION_D}}/git-forgit"
     status:
-      - which forgit
+      - which git-forgit
 
   fzf:
     desc: >
