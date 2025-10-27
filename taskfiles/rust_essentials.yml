@@ -182,7 +182,6 @@ tasks:
       [reservoir_sampling](https://github.com/SamuelLarkin/reservoir_sampling.rs)
     cmds:
       - cargo install --force --git https://github.com/SamuelLarkin/reservoir_sampling_rs
-      - mv ~/.cargo/bin/reservoir_sampling_rs {{.BIN_DIR}}/reservoir_sampling_rs
     generates:
       - "{{.BIN_DIR}}/reservoir_sampling_rs"
     status:
