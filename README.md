@@ -259,3 +259,4 @@ Vim Plugins equivalent
 - [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
 - [The Modern JavaScript Tutorial](https://javascript.info/)
 - [Find your next tool at TerminalTrove](https://terminaltrove.com/)
+- [GNU parallel alternatives](https://www.gnu.org/software/parallel/parallel_alternatives.html#differences-between-gnu-parallel-and-alternatives)
