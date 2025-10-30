@@ -11,6 +11,7 @@ tasks:
       - ijq
       - lazysql
       - nap
+      - rush
       - viddy
 
   fx:
@@ -74,6 +75,22 @@ tasks:
       - "{{.GOBIN}}/nap"
     status:
       - which nap
+    preconditions:
+      - msg: "Go must be in your $PATH"
+        sh: which go
+
+  rush:
+    desc: >
+      A cross-platform command-line tool for executing jobs in parallel.
+    summary: |
+      A cross-platform command-line tool for executing jobs in parallel.
+
+      [rush](https://github.com/shenwei356/rush)
+    cmd: go install github.com/shenwei356/rush@latest
+    generates:
+      - "{{.GOBIN}}/rush"
+    status:
+      - which rush
     preconditions:
       - msg: "Go must be in your $PATH"
         sh: which go
