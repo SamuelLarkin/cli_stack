@@ -12,7 +12,6 @@ tasks:
       - lazysql
       - nap
       - rush
-      - viddy
 
   fx:
     desc: >
@@ -91,22 +90,6 @@ tasks:
       - "{{.GOBIN}}/rush"
     status:
       - which rush
-    preconditions:
-      - msg: "Go must be in your $PATH"
-        sh: which go
-
-  viddy:
-    desc: >
-      👀 A modern watch command. Time machine and pager etc.
-    summary: |
-      👀 A modern watch command. Time machine and pager etc.
-
-      [viddy](https://github.com/sachaos/viddy)
-    cmd: go install github.com/sachaos/viddy@v0.4.0
-    generates:
-      - "{{.GOBIN}}/viddy"
-    status:
-      - which viddy
     preconditions:
       - msg: "Go must be in your $PATH"
         sh: which go
