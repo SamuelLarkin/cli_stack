@@ -39,13 +39,13 @@ env GOBIN=$HOME/.local/bin go install github.com/twpayne/chezmoi@latest
 or
 
 ```sh
-task -t taskfiles/go_essentials.yml chezmoi
+~/.local/bin/task -t taskfiles/go_essentials.yml chezmoi
 ```
 
 Clone and Apply Chezmoi
 
 ```sh
-chezmoi init --apply github:SamuelLarkin/dotfiles.git
+~/.local/bin/chezmoi init --apply github:SamuelLarkin/dotfiles.git
 ```
 
 ## CLI Tools
