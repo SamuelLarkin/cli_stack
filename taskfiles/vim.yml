@@ -32,9 +32,9 @@ tasks:
 
   plugin_manager:
     desc: >
-      Intall plug.vim
+      Install plug.vim
     summary: |
-      Intall plug.vim
+      Install plug.vim
     cmd: |
       curl \
          --create-dirs --fail --location \
