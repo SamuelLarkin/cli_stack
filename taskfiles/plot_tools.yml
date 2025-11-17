@@ -9,6 +9,7 @@ tasks:
     deps:
       - asciigraph
       - histogram
+      - plotille
       - termgraph
 
   asciigraph:
@@ -96,6 +97,8 @@ tasks:
       dots and lines yourself.
       Library Only?
     summary: |
+      Samuel: Very nice output but requires you to write your own python script.
+
       Plot, scatter plots and histograms in the terminal using braille dots,
       with (almost) no dependancies. Plot with color or make complex figures -
       similar to a very small sibling to matplotlib. Or use the canvas to plot
