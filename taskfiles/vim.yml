@@ -35,6 +35,8 @@ tasks:
       Install plug.vim
     summary: |
       Install plug.vim
+
+      [vim plugin manager](https://github.com/junegunn/vim-plug)
     cmd: |
       curl \
          --create-dirs --fail --location \
@@ -46,6 +48,8 @@ tasks:
       vim
     summary: |
       Install vim as an AppImage
+
+      [vim as AppImage](https://github.com/vim/vim-appimage)
     cmds:
       - |
         curl \

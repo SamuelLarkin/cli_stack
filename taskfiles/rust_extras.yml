@@ -124,9 +124,9 @@ tasks:
 
   exa:
     desc: >
-      modern replacement for ls.
+      Modern replacement for ls.
     summary: |
-      modern replacement for ls.
+      Modern replacement for ls.
 
       [exa](https://github.com/ogham/exa)
       [exa - Documentation](https://the.exa.website/)

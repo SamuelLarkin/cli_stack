@@ -79,6 +79,8 @@ tasks:
     summary: |
       Install fzf's integration with tmux.
       fzf-tmux: starts fzf in a tmux pane.
+
+      [fzf-tmux](https://github.com/junegunn/fzf)
     deps:
       - fzf
     cmds:

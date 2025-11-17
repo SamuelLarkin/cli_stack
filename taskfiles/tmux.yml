@@ -26,6 +26,8 @@ tasks:
       Install tmux's plugin manager.
     summary: |
       Install tmux's plugin manager.
+
+      [tmux plugin manager](https://github.com/tmux-plugins/tpm)
     cmd: |
       git \
          clone \
@@ -38,6 +40,8 @@ tasks:
       Install tmux shell completion.
     summary: |
       Install tmux shell completion.
+
+      [tmux shell completion](https://gthub.com/imomaliev/tmux-bash-completion)
     cmd: |
       curl \
          --create-dirs --fail --location \
@@ -79,9 +83,9 @@ tasks:
 
   ncurses:
     desc: >
-      [ncurses](https://libevent.org/)
+      [ncurses](https://invisible-island.net/ncurses/)
     summary: |
-      [ncurses](https://libevent.org/)
+      [ncurses](https://invisible-island.net/ncurses/)
     cmds:
       - |
         curl \

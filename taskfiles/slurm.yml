@@ -16,6 +16,9 @@ tasks:
       SLURM's bash shell completion.
     summary: |
       SLURM's bash shell completion.
+      Bunch of helper files for the Slurm resource manager.
+
+      [slurm-helper](https://github.com/damienfrancois/slurm-helper)
     cmd: |
       curl \
         --create-dirs --fail --location \
@@ -32,6 +35,8 @@ tasks:
       SLURM syntax highlighting.
     summary: |
       SLURM syntax highlighting.
+
+      [SLURM syntax highlighting](https://github.com/SchedMD/slurm)
     cmd: >
       curl \
          --create-dirs --fail --location \

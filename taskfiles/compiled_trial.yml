@@ -51,7 +51,7 @@ tasks:
       NOTE: use go_extras:duf
       Disk Usage/Free Utility (Linux, BSD, macOS & Windows).
 
-      [duf](https://github.com/muesli/duf_:
+      [duf](https://github.com/muesli/duf):
     cmds:
       - git clone https://github.com/muesli/duf.git
       - defer: rm -fr duf

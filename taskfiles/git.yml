@@ -32,6 +32,8 @@ tasks:
       Git's CLI completion
     summary: |
       Git's CLI completion
+
+      [git completion](https://github.com/git/git)
     cmd: |
       curl \
         --create-dirs --fail --location \
@@ -43,6 +45,8 @@ tasks:
       Git's prompt. Are we actually using this or starship completely replaces this?
     summary: |
       Git's prompt. Are we actually using this or starship completely replaces this?
+
+      [git prompt](https://github.com/git/git)
     cmd: |
       curl \
         --create-dirs --fail --location \
