@@ -13,7 +13,7 @@ You may have to install [Rust](https://www.rust-lang.org/tools/install) and [Go]
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-{ mkdir -p ~/opt && rm -fr ~/opt/go && wget 'https://go.dev/dl/go1.25.3.linux-amd64.tar.gz' -O - | tar zxf -  --directory ~/delme; }
+{ mkdir -p ~/opt && rm -fr ~/opt/go && wget 'https://go.dev/dl/go1.25.3.linux-amd64.tar.gz' -O - | tar zxf - --directory ~/opt/; }
 
 export PATH=~/opt/go/bin:${PATH:+:$PATH}
 ```
