@@ -29,6 +29,21 @@ tasks:
     deps:
       - essentials
 
+  minimal:
+    deps:
+      - fzf
+      - nvim
+      - compiled_essentials:nvim
+      - go_essentials:chezmoi
+      - go_essentials:glow
+      - go_essentials:lazygit
+      - rust_essentials:bat
+      - rust_essentials:delta
+      - rust_essentials:difftastic
+      - rust_essentials:lsd
+      - rust_essentials:starship
+      - rust_essentials:zoxide
+
   essentials:
     desc: >
       The minimal set of tools that we use daily.
