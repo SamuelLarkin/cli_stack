@@ -48,6 +48,19 @@ Clone and Apply Chezmoi
 ~/.local/bin/chezmoi init --apply github:SamuelLarkin/dotfiles.git
 ```
 
+### pixi
+
+On systems that lack everything even the default build tools, [pixi](pixi.sh) to the rescue.
+
+```sh
+curl -fsSL https://pixi.sh/install.sh | sh
+```
+
+```sh
+pixi global install make cmake ncurses
+pixi global install nvim
+```
+
 ## CLI Tools
 
 ### Favorites
