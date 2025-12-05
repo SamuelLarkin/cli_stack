@@ -58,7 +58,21 @@ curl -fsSL https://pixi.sh/install.sh | sh
 
 ```sh
 pixi global install make cmake ncurses
-pixi global install nvim
+```
+
+```sh
+pixi global install \
+  bat \
+  chezmoi \
+  delta \
+  difftastic \
+  fzf \
+  glow \
+  lazygit \
+  lsdeluxe \
+  nvim \
+  starship \
+  zoxide
 ```
 
 ## CLI Tools
