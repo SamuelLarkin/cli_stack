@@ -25,7 +25,6 @@ tasks:
       - ouch
       - oxker
       - procs
-      - ripgrep
       - rnr
       - runiq
       - skim
@@ -304,24 +303,6 @@ tasks:
       - "{{.BIN_DIR}}/procs"
     status:
       - which procs
-    preconditions:
-      - msg: "cargo must be in your $PATH"
-        sh: which cargo
-
-  ripgrep:
-    desc: >
-      ripgrep is a line-oriented search tool that recursively searches the
-      current directory for a regex pattern.
-    summary: |
-      ripgrep is a line-oriented search tool that recursively searches the
-      current directory for a regex pattern.
-
-      [rg: ripgrep](https://github.com/BurntSushi/ripgrep)
-    cmd: cargo install --force ripgrep
-    generates:
-      - "{{.BIN_DIR}}/ripgrep"
-    status:
-      - which rg
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo

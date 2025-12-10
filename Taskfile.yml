@@ -32,7 +32,6 @@ tasks:
   minimal:
     deps:
       - fzf
-      - nvim
       - compiled_essentials:nvim
       - go_essentials:chezmoi
       - go_essentials:glow
@@ -41,6 +40,7 @@ tasks:
       - rust_essentials:delta
       - rust_essentials:difftastic
       - rust_essentials:lsd
+      - rust_essentials:ripgrep  # Needed by nvim for Live Search
       - rust_essentials:starship
       - rust_essentials:zoxide
 
@@ -106,7 +106,3 @@ tasks:
       - python
       - python_profiler
       - rust_trial
-
-  nvim:
-    cmds:
-      - task: compiled_essentials:nvim

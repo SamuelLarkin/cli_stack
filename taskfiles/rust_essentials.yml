@@ -17,6 +17,7 @@ tasks:
       - hyperfine
       - lsd
       - reservoir_sampling
+      - ripgrep
       - starship
       - stybulate
       - zoxide
@@ -162,6 +163,24 @@ tasks:
       - "{{.BIN_DIR}}/reservoir_sampling_rs"
     status:
       - which reservoir_sampling_rs
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  ripgrep:
+    desc: >
+      ripgrep is a line-oriented search tool that recursively searches the
+      current directory for a regex pattern.
+    summary: |
+      ripgrep is a line-oriented search tool that recursively searches the
+      current directory for a regex pattern.
+
+      [rg: ripgrep](https://github.com/BurntSushi/ripgrep)
+    cmd: cargo install --force ripgrep
+    generates:
+      - "{{.BIN_DIR}}/ripgrep"
+    status:
+      - which rg
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
