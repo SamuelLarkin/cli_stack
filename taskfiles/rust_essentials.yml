@@ -13,6 +13,7 @@ tasks:
       - bat
       - delta
       - difftastic
+      - fd-find
       - hexyl
       - hyperfine
       - lsd
@@ -85,6 +86,22 @@ tasks:
       - "{{.BIN_DIR}}/difft"
     status:
       - which difft
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  fd-find:
+    desc: >
+      fd is a program to find entries in your filesystem.
+    summary: |
+      fd is a program to find entries in your filesystem.
+
+      [fd](https://github.com/sharkdp/fd)
+    cmd: cargo install --force fd-find
+    generates:
+      - "{{.BIN_DIR}}/fd"
+    status:
+      - which fd
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo

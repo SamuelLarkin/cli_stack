@@ -39,6 +39,7 @@ tasks:
       - rust_essentials:bat
       - rust_essentials:delta
       - rust_essentials:difftastic
+      - rust_essentials:fd-find  # Used by nvim
       - rust_essentials:lsd
       - rust_essentials:ripgrep  # Needed by nvim for Live Search
       - rust_essentials:starship
