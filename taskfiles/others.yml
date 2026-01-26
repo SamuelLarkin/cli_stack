@@ -31,7 +31,7 @@ tasks:
       - tar xf "ollama-$VERSION-linux-amd64.tar.zst" --directory={{.INSTALL_DIR}}
     dir: $HOME/tmp
     env:
-      VERSION: v0.14.2
+      VERSION: v0.15.1
     generates:
       - "{{.BIN_DIR}}/ollama"
     status:
