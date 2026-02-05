@@ -19,6 +19,7 @@ tasks:
       - git-igitt
       - grex
       - helix
+      - hwatch
       - jaq
       - jf
       - presenterm
@@ -201,6 +202,22 @@ tasks:
       - "{{.BIN_DIR}}/hx"
     status:
       - which hx
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: which cargo
+
+  hwatch:
+    desc: >
+      A modern alternative to the watch command, records the differences in execution results and can check this differences at after.
+    summary: |
+      A modern alternative to the watch command, records the differences in execution results and can check this differences at after.
+
+      [hwatch](https://github.com/blacknon/hwatch)
+    cmd: cargo install --force hwatch
+    generates:
+      - "{{.BIN_DIR}}/hwatch"
+    status:
+      - which hwatch
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: which cargo
