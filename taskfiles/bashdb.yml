@@ -39,4 +39,4 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/bashdb"
     status:
-      - which bashdb
+      - command -v bashdb

@@ -44,10 +44,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/htop"
     status:
-      - which htop
+      - command -v htop
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   hyperfine:
     desc: >
@@ -76,7 +76,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hyperfine"
     status:
-      - which hyperfine
+      - command -v hyperfine
 
   jq:
     desc: >
@@ -96,7 +96,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jq"
     status:
-      - which jq
+      - command -v jq
 
   jq_build:
     desc: >
@@ -129,10 +129,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jq"
     status:
-      - which jq
+      - command -v jq
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   nvim:
     desc: >
@@ -154,10 +154,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/nvim"
     status:
-      - which nvim
+      - command -v nvim
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   parallel:
     desc: >
@@ -186,10 +186,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/parallel"
     status:
-      - which parallel
+      - command -v parallel
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   tig:
     desc: >
@@ -231,10 +231,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/bin/tig"
     status:
-      - which tig
+      - command -v tig
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   ugrep:
     desc: >
@@ -264,7 +264,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/ugrep"
     status:
-      - which ugrep
+      - command -v ugrep
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make

@@ -25,10 +25,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/fx"
     status:
-      - which fx
+      - command -v fx
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   ijq:
     desc: >
@@ -41,10 +41,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/ijq"
     status:
-      - which ijq
+      - command -v ijq
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   lazysql:
     desc: >
@@ -57,10 +57,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/lazysql"
     status:
-      - which lazysql
+      - command -v lazysql
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   nap:
     desc: >
@@ -73,10 +73,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/nap"
     status:
-      - which nap
+      - command -v nap
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   rush:
     desc: >
@@ -89,7 +89,7 @@ tasks:
     generates:
       - "{{.GOBIN}}/rush"
     status:
-      - which rush
+      - command -v rush
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go

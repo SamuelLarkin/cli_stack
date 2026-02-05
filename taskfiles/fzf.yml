@@ -38,7 +38,7 @@ tasks:
       - "{{.BIN_DIR}}/forgit"
       - "{{.BASH_COMPLETION_D}}/git-forgit"
     status:
-      - which git-forgit
+      - command -v git-forgit
 
   fzf:
     desc: >
@@ -51,7 +51,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/fzf"
     status:
-      - which fzf
+      - command -v fzf
 
   fzf-git:
     desc: >
@@ -93,7 +93,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/fzf-tmux"
     status:
-      - which fzf-tmux
+      - command -v fzf-tmux
 
   tmux-fzf:
     desc: >

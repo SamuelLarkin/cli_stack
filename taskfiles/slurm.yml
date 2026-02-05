@@ -28,7 +28,7 @@ tasks:
       - "{{.BASH_COMPLETION_D}}/slurm_completion.sh"
     preconditions:
       - msg: This machine doesn't have SLURM
-        sh: which sbatch
+        sh: command -v sbatch
 
   vim_syntax:
     desc: >
@@ -46,4 +46,4 @@ tasks:
       - "{{.HOME}}/.vim/after/syntax/sh/slurm.vim"
     preconditions:
       - msg: This machine doesn't have SLURM
-        sh: which sbatch
+        sh: command -v sbatch

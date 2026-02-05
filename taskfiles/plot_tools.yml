@@ -48,7 +48,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/feedgnuplot"
     status:
-      - which feedgnuplot
+      - command -v feedgnuplot
 
   histogram:
     desc: >
@@ -63,7 +63,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/histogram.py"
     status:
-      - which histogram.py
+      - command -v histogram.py
 
   pipeplot:
     desc: >

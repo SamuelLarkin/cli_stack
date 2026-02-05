@@ -34,10 +34,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/arc"
     status:
-      - which arc
+      - command -v arc
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   direnv:
     desc: >
@@ -53,10 +53,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/direnv"
     status:
-      - which direnv
+      - command -v direnv
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   duf:
     desc: >
@@ -69,10 +69,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/duf"
     status:
-      - which duf
+      - command -v duf
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   f2:
     desc: >
@@ -87,10 +87,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/f2"
     status:
-      - which f2
+      - command -v f2
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   gojq:
     desc: >
@@ -106,10 +106,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/gojq"
     status:
-      - which gojq
+      - command -v gojq
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   gotz:
     desc: >
@@ -122,10 +122,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/gotz"
     status:
-      - which gotz
+      - command -v gotz
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   grv:
     desc: >
@@ -146,10 +146,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/grv"
     status:
-      - which grv
+      - command -v grv
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   jid:
     desc: >
@@ -162,10 +162,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/jid"
     status:
-      - which jid
+      - command -v jid
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   jpq:
     desc: >
@@ -178,10 +178,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/jpq"
     status:
-      - which jpq
+      - command -v jpq
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   lazydocker:
     desc: >
@@ -196,10 +196,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/lazydocker"
     status:
-      - which lazydocker
+      - command -v lazydocker
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   lf:
     desc: >
@@ -214,10 +214,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/lf"
     status:
-      - which lf
+      - command -v lf
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   up:
     desc: >
@@ -230,10 +230,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/up"
     status:
-      - which up
+      - command -v up
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   yq:
     desc: >
@@ -248,7 +248,7 @@ tasks:
     generates:
       - "{{.GOBIN}}/yq"
     status:
-      - which yq
+      - command -v yq
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go

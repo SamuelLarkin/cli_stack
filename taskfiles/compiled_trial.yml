@@ -38,10 +38,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/ctags"
     status:
-      - which ctags
+      - command -v ctags
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   duf:
     desc: >
@@ -63,10 +63,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/duf"
     status:
-      - which duf
+      - command -v duf
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   gh:
     desc: >
@@ -85,10 +85,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/gh"
     status:
-      - which gh
+      - command -v gh
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   jo:
     desc: >
@@ -120,10 +120,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jo"
     status:
-      - which jo
+      - command -v jo
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   lunarvim:
     desc: >
@@ -140,7 +140,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/lvim"
     status:
-      - which lvim
+      - command -v lvim
 
   nodejs:
     aliases:
@@ -176,10 +176,10 @@ tasks:
       - "{{.BIN_DIR}}/node"
       - "{{.BIN_DIR}}/npm"
     status:
-      - which npm
+      - command -v npm
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   nvim.alternate:
     desc: >
@@ -198,7 +198,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/nvim"
     status:
-      - which nvim
+      - command -v nvim
 
   pv:
     desc: >
@@ -230,10 +230,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jq"
     status:
-      - which pv
+      - command -v pv
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   vifm:
     desc: >
@@ -263,7 +263,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/vifm"
     status:
-      - which vifm
+      - command -v vifm
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make

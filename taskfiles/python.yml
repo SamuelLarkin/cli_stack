@@ -23,7 +23,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/bpytop"
     status:
-      - which bpytop
+      - command -v bpytop
 
   glances:
     desc: >
@@ -37,7 +37,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/glances"
     status:
-      - which glances
+      - command -v glances
 
   hapless:
     desc: >
@@ -50,7 +50,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hapless"
     status:
-      - which hapless
+      - command -v hapless
 
   histogram:
     desc: >
@@ -65,7 +65,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/histogram.py"
     status:
-      - which histogram.py
+      - command -v histogram.py
 
   hq:
     desc: >
@@ -78,7 +78,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hq"
     status:
-      - which hq
+      - command -v hq
 
   rich-cli:
     desc: >
@@ -97,7 +97,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/rich-cli"
     status:
-      - which rich-cli
+      - command -v rich-cli
 
   scroll-term:
     desc: >
@@ -110,7 +110,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/scroll-term"
     status:
-      - which scroll-term
+      - command -v scroll-term
 
   tabulate:
     desc: >
@@ -123,7 +123,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tabulate"
     status:
-      - which tabulate
+      - command -v tabulate
 
   tldr:
     desc: >
@@ -140,7 +140,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tldr"
     status:
-      - which tldr
+      - command -v tldr
 
   tmuxp:
     desc: >
@@ -153,7 +153,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tmuxp"
     status:
-      - which tmuxp
+      - command -v tmuxp
 
   tqdm:
     desc: >
@@ -166,7 +166,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tqdm"
     status:
-      - which tqdm
+      - command -v tqdm
 
   xq:
     desc: >
@@ -179,7 +179,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/xq"
     status:
-      - which xq
+      - command -v xq
 
   yq:
     desc: >
@@ -194,7 +194,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/yq"
     status:
-      - which yq
+      - command -v yq
 
   visidata:
     desc: >
@@ -215,7 +215,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/vd"
     status:
-      - which vd
+      - command -v vd
 
   uv:
     desc: >
@@ -230,4 +230,4 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/uv"
     status:
-      - which uv
+      - command -v uv

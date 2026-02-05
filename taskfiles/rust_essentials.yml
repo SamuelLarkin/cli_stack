@@ -34,10 +34,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/bat"
     status:
-      - which bat
+      - command -v bat
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   delta:
     desc: >
@@ -67,10 +67,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/delta"
     status:
-      - which delta
+      - command -v delta
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   difftastic:
     desc: >
@@ -85,10 +85,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/difft"
     status:
-      - which difft
+      - command -v difft
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   fd-find:
     desc: >
@@ -101,10 +101,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/fd"
     status:
-      - which fd
+      - command -v fd
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   hexyl:
     desc: >
@@ -123,10 +123,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hexyl"
     status:
-      - which hexyl
+      - command -v hexyl
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   hyperfine:
     desc: >
@@ -139,10 +139,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hyperfine"
     status:
-      - which hyperfine
+      - command -v hyperfine
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   lsd:
     desc: >
@@ -159,10 +159,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/lsd"
     status:
-      - which lsd
+      - command -v lsd
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   # NOTE we manually move the compile binary because we want to make sure it
   # is different than the other variants of reservoir_sampling.
@@ -179,10 +179,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/reservoir_sampling_rs"
     status:
-      - which reservoir_sampling_rs
+      - command -v reservoir_sampling_rs
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   ripgrep:
     desc: >
@@ -197,10 +197,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/ripgrep"
     status:
-      - which rg
+      - command -v rg
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   starship:
     desc: >
@@ -217,10 +217,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/starship"
     status:
-      - which starship
+      - command -v starship
     preconditions:
       - msg: "cmake must be in your $PATH"
-        sh: which cmake
+        sh: command -v cmake
 
   stybulate:
     desc: >
@@ -233,10 +233,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/stybulate"
     status:
-      - which stybulate
+      - command -v stybulate
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   zoxide:
     desc: >
@@ -255,7 +255,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/zoxide"
     status:
-      - which zoxide
+      - command -v zoxide
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo

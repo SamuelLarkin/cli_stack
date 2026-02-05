@@ -47,10 +47,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/bottom"
     status:
-      - which bottom
+      - command -v bottom
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   broot:
     desc: >
@@ -63,10 +63,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/broot"
     status:
-      - which broot
+      - command -v broot
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   diskonaut:
     desc: >
@@ -79,10 +79,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/diskonaut"
     status:
-      - which diskonaut
+      - command -v diskonaut
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   dust:
     desc: >
@@ -95,10 +95,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/dust"
     status:
-      - which dust
+      - command -v dust
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   erdtree:
     desc: >
@@ -115,10 +115,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/erdtree"
     status:
-      - which erdtree
+      - command -v erdtree
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   exa:
     desc: >
@@ -132,10 +132,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/exa"
     status:
-      - which exa
+      - command -v exa
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   find_unicode:
     desc: >
@@ -148,10 +148,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/fu"
     status:
-      - which fu
+      - command -v fu
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   gitui:
     desc: >
@@ -164,10 +164,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/gitui"
     status:
-      - which gitui
+      - command -v gitui
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   histo:
     desc: >
@@ -182,10 +182,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/histo"
     status:
-      - which histo
+      - command -v histo
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   htmlq:
     desc: >
@@ -198,10 +198,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/htmlq"
     status:
-      - which htmlq
+      - command -v htmlq
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   jless:
     desc: >
@@ -221,10 +221,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jless"
     status:
-      - which jless
+      - command -v jless
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   navi:
     desc: >
@@ -237,10 +237,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/navi"
     status:
-      - which navi
+      - command -v navi
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   ouch:
     desc: >
@@ -253,10 +253,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/ouch"
     status:
-      - which ouch
+      - command -v ouch
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   oxker:
     desc: >
@@ -269,10 +269,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/oxker"
     status:
-      - which oxker
+      - command -v oxker
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   procs:
     desc: >
@@ -285,10 +285,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/procs"
     status:
-      - which procs
+      - command -v procs
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   rnr:
     desc: >
@@ -303,10 +303,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/rnr"
     status:
-      - which rnr
+      - command -v rnr
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   runiq:
     desc: >
@@ -321,10 +321,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/runiq"
     status:
-      - which runiq
+      - command -v runiq
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   skim:
     desc: >
@@ -339,10 +339,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/sk"
     status:
-      - which sk
+      - command -v sk
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   termscp:
     desc: >
@@ -357,10 +357,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/termscp"
     status:
-      - which termscp
+      - command -v termscp
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   vivid:
     desc: >
@@ -375,10 +375,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/vivid"
     status:
-      - which vivid
+      - command -v vivid
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   xsv:
     desc: >
@@ -393,10 +393,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/xsv"
     status:
-      - which xsv
+      - command -v xsv
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   zellij:
     desc: >
@@ -409,10 +409,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/zellij"
     status:
-      - which zellij
+      - command -v zellij
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   zenith:
     desc: >
@@ -425,7 +425,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/zenith"
     status:
-      - which zenith
+      - command -v zenith
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo

@@ -24,7 +24,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/py-spy"
     status:
-      - which py-spy
+      - command -v py-spy
 
   pyinstrument:
     desc: >
@@ -37,4 +37,4 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/pyinstrument"
     status:
-      - which pyinstrument
+      - command -v pyinstrument

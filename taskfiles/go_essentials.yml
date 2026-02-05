@@ -25,10 +25,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/chezmoi"
     status:
-      - which chezmoi
+      - command -v chezmoi
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   gdu:
     desc: >
@@ -41,10 +41,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/gdu"
     status:
-      - which gdu
+      - command -v gdu
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   glow:
     desc: >
@@ -57,10 +57,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/glow"
     status:
-      - which glow
+      - command -v glow
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   lazygit:
     desc: >
@@ -75,10 +75,10 @@ tasks:
     generates:
       - "{{.GOBIN}}/lazygit"
     status:
-      - which lazygit
+      - command -v lazygit
     preconditions:
       - msg: "Go must be in your $PATH"
-        sh: which go
+        sh: command -v go
 
   miller:
     desc: >
@@ -107,4 +107,4 @@ tasks:
     generates:
       - "{{.GOBIN}}/mlr"
     status:
-      - which mlr
+      - command -v mlr

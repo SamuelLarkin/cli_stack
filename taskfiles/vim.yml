@@ -27,8 +27,8 @@ tasks:
       - "{{.BIN_DIR}}/node"
       - "{{.BIN_DIR}}/npm"
     preconditions:
-      - which node
-      - which npm
+      - command -v node
+      - command -v npm
 
   plugin_manager:
     desc: >
@@ -60,4 +60,4 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/vim"
     status:
-      - which vim
+      - command -v vim

@@ -35,7 +35,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/ollama"
     status:
-      - which ollama
+      - command -v ollama
 
   xidel:
     desc: >
@@ -66,4 +66,4 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/xidel"
     status:
-      - which xidel
+      - command -v xidel

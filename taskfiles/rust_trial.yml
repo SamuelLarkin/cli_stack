@@ -40,10 +40,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/sg"
     status:
-      - which sg
+      - command -v sg
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   atuin:
     desc: >
@@ -56,10 +56,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/atuin"
     status:
-      - which atuin
+      - command -v atuin
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   bandwhich:
     desc: >
@@ -74,10 +74,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/bandwhich"
     status:
-      - which bandwhich
+      - command -v bandwhich
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   binsider:
     desc: >
@@ -90,10 +90,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/binsider"
     status:
-      - which binsider
+      - command -v binsider
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   diffsitter:
     desc: >
@@ -111,10 +111,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/diffsitter"
     status:
-      - which diffsitter
+      - command -v diffsitter
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   eza:
     desc: >
@@ -127,10 +127,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/eza"
     status:
-      - which eza
+      - command -v eza
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   git-graph:
     desc: >
@@ -143,10 +143,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/git-graph"
     status:
-      - which git-graph
+      - command -v git-graph
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   git-igitt:
     desc: >
@@ -159,10 +159,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/git-igitt"
     status:
-      - which git-igitt
+      - command -v git-igitt
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   grex:
     desc: >
@@ -178,10 +178,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/grex"
     status:
-      - which grex
+      - command -v grex
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   helix:
     desc: >
@@ -201,10 +201,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hx"
     status:
-      - which hx
+      - command -v hx
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   hwatch:
     desc: >
@@ -217,10 +217,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/hwatch"
     status:
-      - which hwatch
+      - command -v hwatch
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   jaq:
     desc: >
@@ -233,10 +233,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jaq"
     status:
-      - which jaq
+      - command -v jaq
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   jf:
     desc: >
@@ -249,10 +249,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/jf"
     status:
-      - which jf
+      - command -v jf
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   presenterm:
     desc: >
@@ -265,10 +265,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/presenterm"
     status:
-      - which presenterm
+      - command -v presenterm
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   serie:
     desc: >
@@ -281,10 +281,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/serie"
     status:
-      - which serie
+      - command -v serie
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   tabiew:
     desc: >
@@ -297,10 +297,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tw"
     status:
-      - which tw
+      - command -v tw
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   television:
     desc: >
@@ -313,10 +313,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tv"
     status:
-      - which tv
+      - command -v tv
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   viddy:
     desc: >
@@ -329,10 +329,10 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/viddy"
     status:
-      - which viddy
+      - command -v viddy
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo
 
   watchexec:
     desc: >
@@ -345,7 +345,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/watchexec"
     status:
-      - which watchexec
+      - command -v watchexec
     preconditions:
       - msg: "cargo must be in your $PATH"
-        sh: which cargo
+        sh: command -v cargo

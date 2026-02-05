@@ -81,7 +81,7 @@ tasks:
       VERSION: 2.1.12-stable
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   ncurses:
     desc: >
@@ -108,7 +108,7 @@ tasks:
       VERSION: 6.5
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
 
   tmux:
     desc: >
@@ -139,9 +139,9 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/tmux"
     status:
-      - which tmux
+      - command -v tmux
     preconditions:
       - msg: "make must be in your $PATH"
-        sh: which make
+        sh: command -v make
       - msg: "yacc must be in your $PATH"
-        sh: which yacc
+        sh: command -v yacc

@@ -23,7 +23,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/elvish"
     status:
-      - which elvish
+      - command -v elvish
 
   fish:
     desc: >
@@ -59,7 +59,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/fish"
     status:
-      - which fish
+      - command -v fish
 
   nu:
     desc: >
@@ -74,7 +74,7 @@ tasks:
     generates:
       - "{{.BIN_DIR}}/nu"
     status:
-      - which nu
+      - command -v nu
 
   xonsh:
     desc: >
@@ -85,4 +85,4 @@ tasks:
       [xonsh](https://xon.sh/)
     cmd: python3 -m pip install --user --upgrade 'xonsh[full]'
     status:
-      - which xonsh
+      - command -v xonsh
