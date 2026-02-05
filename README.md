@@ -75,6 +75,24 @@ pixi global install \
   zoxide
 ```
 
+### Windoze
+
+In [difftastic documentation](https://difftastic.wilfred.me.uk/installation.html#windows) we found a way to install some packages on Windoze.
+
+```sh
+winget install difftastic
+winget install fzf
+winget install lsd
+winget install helix
+winget install jq
+winget install ugrep
+winget install charmbracelet.glow
+winget install lazygit
+winget install miller
+winget install sharkdp.bat
+winget install zoxide
+```
+
 ## CLI Tools
 
 ### Favorites
