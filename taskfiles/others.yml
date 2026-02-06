@@ -25,13 +25,13 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output "ollama-$VERSION-linux-amd64.tar.zst" \
-        "https://github.com/ollama/ollama/releases/download/$VERSION/ollama-linux-amd64.tar.zst"
-      - defer: rm "ollama-$VERSION-linux-amd64.tar.zst"
-      - tar xf "ollama-$VERSION-linux-amd64.tar.zst" --directory={{.INSTALL_DIR}}
+          --output $TARBALL \
+        "https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tar.zst"
+      - defer: rm $TARBALL
+      - tar xf $TARBALL --directory={{.INSTALL_DIR}}
     dir: $HOME/tmp
     env:
-      VERSION: v0.15.1
+      TARBALL: oLLaMa.tar.zst
     generates:
       - "{{.BIN_DIR}}/ollama"
     status:
@@ -52,15 +52,16 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output "xidel-$VERSION.linux64.tar.gz" \
+          --output $TARBALL \
           "https://sourceforge.net/projects/videlibri/files/Xidel/Xidel%20$VERSION/xidel-$VERSION.linux64.tar.gz/download"
-      - defer: rm "xidel-$VERSION.linux64.tar.gz"
-      - tar xf "xidel-$VERSION.linux64.tar.gz"
+      - defer: rm $TARBALL
+      - tar xf $TARBALL
       - defer: rm changelog install.sh readme.txt
       - chmod u+x xidel
       - mv xidel "{{.BIN_DIR}}"
     dir: $HOME/tmp
     env:
+      TARBALL: xidel.linux64.tar.gz
       VERSION: 0.9.8
     generates:
       - "{{.BIN_DIR}}/xidel"

@@ -101,19 +101,21 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output jo-$VERSION.tar.gz \
+          --output $TARBALL \
           "https://github.com/jpmens/jo/releases/download/$VERSION/jo-$VERSION.tar.gz"
-      - defer: rm jo-$VERSION.tar.gz
-      - tar xf jo-$VERSION.tar.gz
-      - defer: rm -fr jo-$VERSION
+      - defer: rm $TARBALL
+      - mkdir -p jo
+      - defer: rm -fr jo
+      - tar xf $TARBALL -C jo --strip-components=1
       - |
-        cd jo-$VERSION
+        cd jo
         autoreconf -i
         ./configure
         \make check
         \make DESTDIR="{{.INSTALL_DIR}}" install
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: jo.tar.gz
       VERSION: 1.9
     generates:
       - "{{.BIN_DIR}}/jo"
@@ -155,18 +157,20 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output node-$VERSION.tar.gz \
+          --output $TARBALL \
           "https://nodejs.org/dist/$VERSION/node-$VERSION.tar.gz"
-      - defer: rm node-$VERSION.tar.gz
-      - tar xf node-$VERSION.tar.gz
-      - defer: rm -fr node-$VERSION/
+      - defer: rm $TARBALL
+      - mkdir -p nodejs
+      - defer: rm -fr nodejs
+      - tar xf $TARBALL -C nodejs --strip-components=1
       - |
-        cd node-$VERSION/
+        cd nodejs
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc)
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: nodejs.tar.gz
       VERSION: v21.1.0
     generates:
       - "{{.BIN_DIR}}/node"
@@ -209,17 +213,19 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output pv-$VERSION.tar.bz2 \
+          --output $TARBALL \
           "http://www.ivarch.com/programs/sources/pv-$VERSION.tar.bz2"
-      - defer: rm pv-$VERSION.tar.bz2
-      - tar xf pv-$VERSION.tar.bz2
-      - defer: rm -fr pv-$VERSION/
+      - defer: rm $TARBALL
+      - mkdir -p pv
+      - defer: rm -fr pv
+      - tar xf $TARBALL -C pv --strip-components=1
       - |
-        cd pv-$VERSION/
+        cd pv
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: pv.tar.bz2
       VERSION: 1.6.20
     generates:
       - "{{.BIN_DIR}}/jq"
@@ -240,17 +246,19 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output vifm.tar.gz \
+          --output $TARBALL \
           "https://github.com/vifm/vifm/archive/refs/tags/v$VERSION.tar.gz"
-      - defer: rm vifm.tar.gz
-      - tar xf vifm.tar.gz
-      - defer: rm -fr vifm-$VERSION/
+      - defer: rm $TARBALL
+      - mkdir -p vifm
+      - defer: rm -fr vifm
+      - tar xf $TARBALL -C vifm --strip-components=1
       - |
-        cd vifm-$VERSION/
+        cd vifm
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: vifm.tar.gz
       VERSION: 0.12
     generates:
       - "{{.BIN_DIR}}/vifm"

@@ -41,19 +41,21 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output fish-$VERSION.tar.xz \
+          --output $TARBALL \
           "https://github.com/fish-shell/fish-shell/releases/download/$VERSION/fish-$VERSION.tar.xz"
-      - defer: rm fish-$VERSION.tar.xz
-      - tar xf fish-$VERSION.tar.xz
-      - defer: rm -fr fish-$VERSION
+      - defer: rm $TARBALL
+      - mkdir -p fish
+      - defer: rm -fr fish
+      - tar xf $TARBALL -C fish --strip-components=1
       - |
-        cd fish-$VERSION
+        cd fish
         mkdir -p build && cd build
         cmake -DCMAKE_INSTALL_PREFIX={{.INSTALL_DIR}} ..
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
-      VERSION: 3.7.1
+      TARBALL: fish.tar.xz
+      VERSION: 4.4.0
     generates:
       - "{{.BIN_DIR}}/fish"
     status:

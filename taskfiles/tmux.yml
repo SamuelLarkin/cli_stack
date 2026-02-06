@@ -65,17 +65,19 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output "libevent-$VERSION.tar.gz" \
+          --output $TARBALL \
           "https://github.com/libevent/libevent/releases/download/release-$VERSION/libevent-$VERSION.tar.gz"
-      - defer: rm "libevent-$VERSION.tar.gz"
-      - tar xf libevent-$VERSION.tar.gz
-      - defer: rm -fr libevent-$VERSION
+      - defer: rm $TARBALL
+      - mkdir -p libevent
+      - defer: rm -fr libevent
+      - tar xf $TARBALL -C libevent --strip-components=1
       - |
-        cd libevent-$VERSION
+        cd libevent
         ./configure --prefix="{{.INSTALL_DIR}}" --enable-shared
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: libevent.tar.gz
       VERSION: 2.1.12-stable
     preconditions:
       - msg: "make must be in your $PATH"
@@ -90,17 +92,19 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output "ncurses-$VERSION.tar.gz" \
+          --output $TARBALL \
           "https://ftp.gnu.org/gnu/ncurses/ncurses-$VERSION.tar.gz"
-      - defer: rm "ncurses-$VERSION.tar.gz"
-      - tar xf ncurses-$VERSION.tar.gz
-      - defer: rm -fr ncurses-$VERSION
+      - defer: rm $TARBALL
+      - mkdir -p ncurses
+      - defer: rm -fr ncurses
+      - tar xf $TARBALL -C ncurses --strip-components=1
       - |
-        cd ncurses-$VERSION
+        cd ncurses
         ./configure --prefix="{{.INSTALL_DIR}}" --with-shared --with-termlib --enable-pc-files --with-pkg-config-libdir={{.INSTALL_DIR}}/lib/pkgconfig
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: ncurses.tar.gz
       VERSION: 6.5
     preconditions:
       - msg: "make must be in your $PATH"
@@ -117,18 +121,20 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output "tmux-$VERSION.tar.gz" \
+          --output $TARBALL \
           "https://github.com/tmux/tmux/releases/download/$VERSION/tmux-$VERSION.tar.gz"
-      - defer: rm "tmux-$VERSION.tar.gz"
-      - tar xf tmux-$VERSION.tar.gz
-      - defer: rm -fr tmux-$VERSION
+      - defer: rm $TARBALL
+      - mkdir -p tmux
+      - defer: rm -fr tmux
+      - tar xf $TARBALL -C tmux --strip-components=1
       - |
-        cd tmux-$VERSION
+        cd tmux
         PKG_CONFIG_PATH={{.INSTALL_DIR}}/lib/pkgconfig ./configure --prefix="{{.INSTALL_DIR}}" --enable-static
         \make -j $(nproc) install
     deps: [libevent, ncurses]
     dir: "{{.HOME}}/tmp"
     env:
+      TARBALL: tmux.tar.gz
       VERSION: 3.5a
     generates:
       - "{{.BIN_DIR}}/tmux"

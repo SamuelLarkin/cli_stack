@@ -41,17 +41,19 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output ncdu-$VERSION.tar.gz \
           --no-check-certificate \
+          --output $TARBALL \
           "https://dev.yorhel.nl/download/ncdu-$VERSION.tar.gz"
-      - defer: rm ncdu-$VERSION.tar.gz
-      - tar xf ncdu-$VERSION.tar.gz
-      - defer: rm -fr ncdu-$VERSION
+      - defer: rm $TARBALL
+      - mkdir -p ncdu
+      - defer: rm -fr ncdu
+      - tar xf $TARBALL -C ncdu --strip-components=1
       - |
-        cd ncdu-$VERSION
+        cd ncdu
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc) install
     env:
+      TARBALL: ncdu.tar.gz
       VERSION: 1.16
     dir: "{{.HOME}}/tmp"
     generates:

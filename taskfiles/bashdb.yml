@@ -23,16 +23,18 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output bashdb-$VERSION.tar.bz2 \
+          --output $TARBALL \
           "https://sourceforge.net/projects/bashdb/files/bashdb/$VERSION/bashdb-$VERSION.tar.bz2/download"
-      - defer: rm bashdb-$VERSION.tar.bz2
-      - tar xf bashdb-$VERSION.tar.bz2
-      - defer: rm -fr bashdb-$VERSION/
+      - defer: rm $TARBALL
+      - mkdir -p bashdb
+      - defer: rm -fr bashdb
+      - tar xf $TARBALL -C bashdb --strip-components=1
       - |
-        cd bashdb-$VERSION/
+        cd bashdb
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make install
     env:
+      TARBALL: bashdb.tar.bz2
       VERSION: 5.0-1.1.2
     generates:
       - "{{.BIN_DIR}}/bashdb"

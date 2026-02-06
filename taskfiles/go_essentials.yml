@@ -95,15 +95,15 @@ tasks:
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/johnkerl/miller/releases/download/v$VERSION/miller-$VERSION-linux-amd64.tar.gz"
+          "$(curl -s https://api.github.com/repos/johnkerl/miller/releases/latest | jq --raw-output '.assets[] | select(.name | contains("-linux-amd64.tar.gz")) | .browser_download_url')"
       - defer: rm $TARBALL
-      - tar xf $TARBALL
-      - defer: rm -fr miller-$VERSION-linux-amd64
-      - install --mode=500 --target-directory="{{.GOBIN}}" miller-$VERSION-linux-amd64/mlr
+      - mkdir -p miller
+      - defer: rm -fr miller
+      - tar xf $TARBALL -C miller --strip-components=1
+      - install --mode=500 --target-directory="{{.GOBIN}}" miller/mlr
     dir: "{{.HOME}}/tmp"
     env:
       TARBALL: miller.tar.gz
-      VERSION: 6.15.0
     generates:
       - "{{.GOBIN}}/mlr"
     status:
