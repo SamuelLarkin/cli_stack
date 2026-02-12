@@ -19,6 +19,7 @@ tasks:
       - git-igitt
       - grex
       - helix
+      - huniq
       - hwatch
       - jaq
       - jf
@@ -202,6 +203,22 @@ tasks:
       - "{{.BIN_DIR}}/hx"
     status:
       - command -v hx
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: command -v cargo
+
+  huniq:
+    desc: >
+      Filter out duplicates on the command line. Replacement for `sort | uniq` optimized for speed (10x faster) when sorting is not needed.
+    summary: |
+      Filter out duplicates on the command line. Replacement for `sort | uniq` optimized for speed (10x faster) when sorting is not needed.
+
+      [huniq](https://github.com/koraa/huniq)
+    cmd: cargo install --force huniq
+    generates:
+      - "{{.BIN_DIR}}/huniq"
+    status:
+      - command -v huniq
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: command -v cargo
