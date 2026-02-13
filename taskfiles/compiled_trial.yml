@@ -12,7 +12,6 @@ tasks:
       - gh
       - jo
       - lunarvim
-      - nodejs
       - pv
       - vifm
 
@@ -141,45 +140,6 @@ tasks:
       - "{{.BIN_DIR}}/lvim"
     status:
       - command -v lvim
-
-  nodejs:
-    aliases:
-      - npm
-    desc: >
-      Node.js® is an open-source, cross-platform JavaScript runtime
-      environment.
-    summary: |
-      Node.js® is an open-source, cross-platform JavaScript runtime
-      environment.
-
-      [Node.js](https://nodejs.org/en)
-    cmds:
-      - |
-        curl \
-          --create-dirs --fail --location \
-          --output $TARBALL \
-          "https://nodejs.org/dist/$VERSION/node-$VERSION.tar.gz"
-      - defer: rm $TARBALL
-      - mkdir -p nodejs
-      - defer: rm -fr nodejs
-      - tar xf $TARBALL -C nodejs --strip-components=1
-      - |
-        cd nodejs
-        ./configure --prefix="{{.INSTALL_DIR}}"
-        \make -j $(nproc)
-        \make -j $(nproc) install
-    dir: "{{.HOME}}/tmp"
-    env:
-      TARBALL: nodejs.tar.gz
-      VERSION: v24.13.0
-    generates:
-      - "{{.BIN_DIR}}/node"
-      - "{{.BIN_DIR}}/npm"
-    status:
-      - command -v npm
-    preconditions:
-      - msg: "make must be in your $PATH"
-        sh: command -v make
 
   nvim.alternate:
     desc: >
