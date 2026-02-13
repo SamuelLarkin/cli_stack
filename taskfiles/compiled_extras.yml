@@ -47,7 +47,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p ncdu
       - defer: rm -fr ncdu
-      - tar xf $TARBALL -C ncdu --strip-components=1
+      - tar xf $TARBALL --directory=ncdu --strip-components=1
       - |
         cd ncdu
         ./configure --prefix="{{.INSTALL_DIR}}"

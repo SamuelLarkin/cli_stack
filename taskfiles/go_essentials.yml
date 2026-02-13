@@ -99,7 +99,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p miller
       - defer: rm -fr miller
-      - tar xf $TARBALL -C miller --strip-components=1
+      - tar xf $TARBALL --directory=miller --strip-components=1
       - install --mode=500 --target-directory="{{.GOBIN}}" miller/mlr
     dir: "{{.HOME}}/tmp"
     env:

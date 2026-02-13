@@ -28,7 +28,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p bashdb
       - defer: rm -fr bashdb
-      - tar xf $TARBALL -C bashdb --strip-components=1
+      - tar xf $TARBALL --directory=bashdb --strip-components=1
       - |
         cd bashdb
         ./configure --prefix="{{.INSTALL_DIR}}"

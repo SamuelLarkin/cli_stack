@@ -30,7 +30,7 @@ tasks:
           --output $TARBALL \
           "https://github.com/htop-dev/htop/releases/download/$VERSION/htop-$VERSION.tar.xz"
       - defer: rm $TARBALL
-      - tar xf $TARBALL -C htop --strip-components=1
+      - tar xf $TARBALL --directory=htop --strip-components=1
       - defer: rm -fr htop
       - |
         cd htop
@@ -67,7 +67,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p hyperfine
       - defer: rm -fr hyperfine
-      - tar xf $TARBALL -C hyperfine --strip-components=1
+      - tar xf $TARBALL --directory=hyperfine --strip-components=1
       - cp hyperfine/hyperfine "{{.BIN_DIR}}"
     dir: "{{.HOME}}/tmp"
     env:
@@ -115,7 +115,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p jq-build
       - defer: rm -fr jq-build
-      - tar xf $TARBALL -C jq-build --strip-components=1
+      - tar xf $TARBALL --directory=jq-build --strip-components=1
       - |
         cd jq-build
         autoreconf -fi
@@ -175,7 +175,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p parallel
       - defer: rm -fr parallel
-      - tar xf $TARBALL -C parallel --strip-components=1
+      - tar xf $TARBALL --directory=parallel --strip-components=1
       - |
         cd parallel
         ./configure --prefix="{{.INSTALL_DIR}}"
@@ -207,7 +207,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p tig
       - defer: rm -fr tig
-      - tar xf $TARBALL -C tig --strip-components=1
+      - tar xf $TARBALL --directory=tig --strip-components=1
       - |
         cd tig
         ./autogen.sh
@@ -252,7 +252,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p ugrep
       - defer: rm -fr ugrep
-      - tar xf $TARBALL -C ugrep --strip-components=1
+      - tar xf $TARBALL --directory=ugrep --strip-components=1
       - |
         cd ugrep
         ./configure --prefix="{{.INSTALL_DIR}}" --without-zstd

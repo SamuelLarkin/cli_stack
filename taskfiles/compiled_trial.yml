@@ -106,7 +106,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p jo
       - defer: rm -fr jo
-      - tar xf $TARBALL -C jo --strip-components=1
+      - tar xf $TARBALL --directory=jo --strip-components=1
       - |
         cd jo
         autoreconf -i
@@ -218,7 +218,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p pv
       - defer: rm -fr pv
-      - tar xf $TARBALL -C pv --strip-components=1
+      - tar xf $TARBALL --directory=pv --strip-components=1
       - |
         cd pv
         ./configure --prefix="{{.INSTALL_DIR}}"
@@ -251,7 +251,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p vifm
       - defer: rm -fr vifm
-      - tar xf $TARBALL -C vifm --strip-components=1
+      - tar xf $TARBALL --directory=vifm --strip-components=1
       - |
         cd vifm
         ./configure --prefix="{{.INSTALL_DIR}}"

@@ -46,7 +46,7 @@ tasks:
       - defer: rm $TARBALL
       - mkdir -p fish
       - defer: rm -fr fish
-      - tar xf $TARBALL -C fish --strip-components=1
+      - tar xf $TARBALL --directory=fish --strip-components=1
       - |
         cd fish
         mkdir -p build && cd build
