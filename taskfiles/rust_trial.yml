@@ -25,6 +25,7 @@ tasks:
       - jf
       - presenterm
       - serie
+      - succinctly
       - tabiew
       - television
       - viddy
@@ -299,6 +300,22 @@ tasks:
       - "{{.BIN_DIR}}/serie"
     status:
       - command -v serie
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: command -v cargo
+
+  succinctly:
+    desc: >
+      [jq-like] Succinct data structures
+    summary: |
+      [jq-like] Succinct data structures
+
+      [succinctly](https://github.com/rust-works/succinctly)
+    cmd: cargo install --locked --features cli --git https://github.com/rust-works/succinctly
+    generates:
+      - "{{.BIN_DIR}}/succinctly"
+    status:
+      - command -v succinctly
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: command -v cargo
