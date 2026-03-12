@@ -318,6 +318,7 @@ These are my most used CLIs.
 - [atuin - GitHub](https://github.com/ellie/atuin): Atuin replaces your existing shell history with a SQLite database, and records additional context for your commands. Additionally, it provides optional and fully encrypted synchronisation of your history between machines, via an Atuin server.
 - [autoenv - GitHub](https://github.com/kennethreitz/autoenv): Directory-based environments
 - [bfs - GitHub](https://github.com/tavianator/bfs) A breadth-first version of the UNIX find command.
+- [brename](https://github.com/shenwei356/brename): A practical cross-platform command-line tool for safely batch renaming files/directories via regular expression.
 - [direnv](https://direnv.net/): Unclutter your .profile
 - [fx - GitHub](https://github.com/antonmedv/fx): Terminal JSON viewer
 - [gitui - GitHub](https://github.com/extrawurst/gitui): GitUI provides you with the comfort of a git GUI but right in your terminal. Not as great as lazygit.
@@ -362,21 +363,42 @@ Vim Plugins equivalent
 
 # Links
 
+- [Command Line - Reddit](https://www.reddit.com/r/commandline/): This is for anything regarding the command line, in any operating system. All questions (including dumb ones), tips, and links to interesting programs/console applications you've found or made yourself are welcome. Linux / BSD / OSX / Windows CLI and TUI apps or questions or comments, we're happy to take them all!
+- [A list of new(ish) command line tools](https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/)
+- [Awesome TUIs](https://github.com/rothgar/awesome-tuis) List of projects that provide terminal user interfaces.
+- [Find your next tool at TerminalTrove](https://terminaltrove.com/)
+- [GNU parallel alternatives](https://www.gnu.org/software/parallel/parallel_alternatives.html#differences-between-gnu-parallel-and-alternatives)
+
+## Fonts
+
+- [Nerd Fonts](https://www.nerdfonts.com): Nerd Fonts patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular ‘iconic fonts’ such as Font Awesome, Devicons, Octicons, and others.
+- [Programming Fonts](https://www.programmingfonts.org): Test drive all the programming fonts!
+
+## jq
+
 - [jq - manual](https://stedolan.github.io/jq/manual/v1.5/)
 - [jq - cookbook](https://github.com/stedolan/jq/wiki/Cookbook)
 - [jq-hopkok jq utility library - GitHub](https://github.com/joelpurra/jq-hopkok): Checkout how they handle `parallel` with `jq`.
+
+## Python
+
 - [6 stellar libraries for profiling Python code](https://www.infoworld.com/article/3600993/6-stellar-libraries-for-profiling-python-code.html)
-- [Nerd Fonts](https://www.nerdfonts.com): Nerd Fonts patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular ‘iconic fonts’ such as Font Awesome, Devicons, Octicons, and others.
-- [Programming Fonts](https://www.programmingfonts.org): Test drive all the programming fonts!
-- [Command Line - Reddit](https://www.reddit.com/r/commandline/): This is for anything regarding the command line, in any operating system. All questions (including dumb ones), tips, and links to interesting programs/console applications you've found or made yourself are welcome. Linux / BSD / OSX / Windows CLI and TUI apps or questions or comments, we're happy to take them all!
-- [Vim - Reddit](https://www.reddit.com/r/vim/): For Vim enthusiasts and anyone interested in Vim.
-- [A list of new(ish) command line tools](https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/)
+
+## Rust
+
+- [A curated list of command-line tools written in Rust](https://sts10.github.io/docs/rust-command-line-tools.html)
+- [A curated list of Rust code and resources](https://github.com/rust-unofficial/awesome-rust)
+- [A curated list of replacements for existing software written in Rust](https://github.com/TaKO8Ki/awesome-alternatives-in-rust)
 - [tui-rs - GitHub](https://github.com/fdehau/tui-rs): Build terminal user interfaces and dashboards using Rust.
-- [Awesome TUIs](https://github.com/rothgar/awesome-tuis) List of projects that provide terminal user interfaces.
+
+## vim
+
+- [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
+- [Vim - Reddit](https://www.reddit.com/r/vim/): For Vim enthusiasts and anyone interested in Vim.
+- [AWESOME VIM PLUGINS from ACROSS THE UNIVERSE](https://vimawesome.com/)
+
+## Others
+
 - [fzf Web Color Picker](https://minsw.github.io/fzf-color-picker/)
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-- [AWESOME VIM PLUGINS from ACROSS THE UNIVERSE](https://vimawesome.com/)
-- [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
 - [The Modern JavaScript Tutorial](https://javascript.info/)
-- [Find your next tool at TerminalTrove](https://terminaltrove.com/)
-- [GNU parallel alternatives](https://www.gnu.org/software/parallel/parallel_alternatives.html#differences-between-gnu-parallel-and-alternatives)
