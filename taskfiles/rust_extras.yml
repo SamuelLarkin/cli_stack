@@ -28,6 +28,7 @@ tasks:
       - runiq
       - skim
       - termscp
+      - tree-sitter
       - vivid
       - xsv
       - zellij
@@ -358,6 +359,22 @@ tasks:
       - "{{.BIN_DIR}}/termscp"
     status:
       - command -v termscp
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: command -v cargo
+
+  tree-sitter:
+    desc: >
+      An incremental parsing system for programming tools.
+    summary: |
+      An incremental parsing system for programming tools.
+
+      [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/tree/master)
+    cmd: cargo install --locked tree-sitter-cli --force
+    generates:
+      - "{{.BIN_DIR}}/tree-sitter"
+    status:
+      - command -v tree-sitter
     preconditions:
       - msg: "cargo must be in your $PATH"
         sh: command -v cargo
