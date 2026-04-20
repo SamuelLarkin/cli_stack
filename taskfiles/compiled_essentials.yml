@@ -150,7 +150,7 @@ tasks:
         \make install CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX={{.INSTALL_DIR}}
     dir: "{{.HOME}}/tmp"
     env:
-      VERSION: v0.11.4
+      VERSION: stable
     generates:
       - "{{.BIN_DIR}}/nvim"
     status:
