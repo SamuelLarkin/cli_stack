@@ -34,6 +34,10 @@ tasks:
          https://github.com/tmux-plugins/tpm \
          {{.HOME}}/.tmux/plugins/tpm \
       || ( cd {{.HOME}}/.tmux/plugins/tpm && git pull; )
+    generates:
+      - "{{.HOME}}/.tmux/plugins/tpm"
+    status:
+      - test -d {{.HOME}}/.tmux/plugins/tpm
 
   shell_completion:
     desc: >
@@ -47,6 +51,10 @@ tasks:
          --create-dirs --fail --location \
          --output {{.BASH_COMPLETION_D}}/'#1' \
          'https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/{tmux}'
+    generates:
+      - "{{.BASH_COMPLETION_D}}/tmux"
+    status:
+      - test -s "{{.BASH_COMPLETION_D}}/tmux"
 
   libevent:
     desc: >

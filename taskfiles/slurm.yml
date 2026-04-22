@@ -25,7 +25,9 @@ tasks:
         --output {{.BASH_COMPLETION_D}}/'#1' \
         'https://raw.githubusercontent.com/damienfrancois/slurm-helper/master/{slurm}_completion.sh'
     generates:
-      - "{{.BASH_COMPLETION_D}}/slurm_completion.sh"
+      - "{{.BASH_COMPLETION_D}}/slurm"
+    status:
+      - test -s "{{.BASH_COMPLETION_D}}/slurm"
     preconditions:
       - msg: This machine doesn't have SLURM
         sh: command -v sbatch
@@ -44,6 +46,8 @@ tasks:
          'https://raw.githubusercontent.com/SchedMD/slurm/master/contribs/slurm_completion_help/{slurm.vim}'
     generates:
       - "{{.HOME}}/.vim/after/syntax/sh/slurm.vim"
+    status:
+      - test -s "{{.HOME}}/.vim/after/syntax/sh/slurm.vim"
     preconditions:
       - msg: This machine doesn't have SLURM
         sh: command -v sbatch

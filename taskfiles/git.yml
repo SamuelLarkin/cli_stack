@@ -26,6 +26,10 @@ tasks:
           --output {{.BIN_DIR}}/'#1' \
           "https://raw.githubusercontent.com/newren/git-filter-repo/main/{git-filter-repo}"
       - chmod u+x {{.BIN_DIR}}/git-filter-repo
+    generates:
+      - "{{.BIN_DIR}}/git-filter-repo"
+    status:
+      - command -v git-filter-repo
 
   git_completion:
     desc: >
@@ -39,6 +43,10 @@ tasks:
         --create-dirs --fail --location \
         --output {{.BASH_COMPLETION_D}}/git \
         'https://raw.githubusercontent.com/git/git/master/contrib/completion/{git-completion.bash}'
+    generates:
+      - "{{.BASH_COMPLETION_D}}/git"
+    status:
+      - test -s "{{.BASH_COMPLETION_D}}/git"
 
   git_prompt:
     desc: >
@@ -52,3 +60,7 @@ tasks:
         --create-dirs --fail --location \
         --output {{.BASH_COMPLETION_D}}/'#1' \
         'https://raw.githubusercontent.com/git/git/master/contrib/completion/{git-prompt.sh}'
+    generates:
+      - "{{.BASH_COMPLETION_D}}/git-prompt.sh"
+    status:
+      - test -s "{{.BASH_COMPLETION_D}}/git-prompt.sh"
