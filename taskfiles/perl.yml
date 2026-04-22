@@ -1,5 +1,9 @@
 version: "3"
 
+env:
+  BIN_DIR: "{{.HOME}}/perl/bin"
+  INSTALL_DIR: "{{.HOME}}/perl"
+
 tasks:
   default:
     deps:
@@ -13,3 +17,7 @@ tasks:
 
       [rename](https://metacpan.org/dist/File-Rename/view/rename.PL)
     cmd: cpan install File::Rename
+    generates:
+      - "{{.BIN_DIR}}/rename"
+    status:
+      - command -v rename
