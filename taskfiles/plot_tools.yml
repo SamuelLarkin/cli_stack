@@ -3,6 +3,10 @@ version: "3"
 env:
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
+  # NOTE: [Environment variable used by cargo to specify the installation directory](https://doc.rust-lang.org/cargo/commands/cargo-install.html)
+  CARGO_INSTALL_ROOT: "{{.HOME}}/.local"
+  # [The directory where go install and go get will place binaries after building main packages](https://www.programming-books.io/essential/go/gopath-goroot-gobin-d6da4b8481f94757bae43be1fdfa9e73#fcf0957a-4f5a-4f3e-870f-dd49aead22bd)
+  GOBIN: "{{.HOME}}/.local/bin"
 
 tasks:
   default:
@@ -20,6 +24,10 @@ tasks:
 
       [asciigraph](https://github.com/guptarohit/asciigraph)
     cmd: go install github.com/guptarohit/asciigraph/cmd/asciigraph@latest
+    generates:
+      - "{{.BIN_DIR}}/asciigraph"
+    status:
+      - command -v asciigraph
 
   bashplotlib:
     desc: >
@@ -28,7 +36,11 @@ tasks:
       plotting in the terminal.
 
       [bashplotlib](https://github.com/glamp/bashplotlib)
-    cmd: python3 -m pip install --user --upgrade bashplotlib
+    cmd: uv pip install --upgrade bashplotlib
+    generates:
+      - "{{.BIN_DIR}}/bashplotlib"
+    status:
+      - command -v bashplotlib
 
   feedgnuplot:
     desc: >
@@ -59,7 +71,7 @@ tasks:
       [histogram.py](https://github.com/nicholasren/data_hacks3) the python3 version
       [histogram.py](https://github.com/bitly/data_hacks) the original
     #cmd: python3 -m pip install --user --upgrade data_hacks   # Only works with python2
-    cmd: python3 -m pip install --user --upgrade data_hacks3
+    cmd: uv pip install --upgrade data_hacks3
     generates:
       - "{{.BIN_DIR}}/histogram.py"
     status:
@@ -74,7 +86,11 @@ tasks:
       pipe.
 
       [Pipe Plot](https://github.com/MyGodIsHe/pipeplot)
-    cmd: python3 -m pip install --user --upgrade pipeplot
+    cmd: uv pip install --upgrade pipeplot
+    generates:
+      - "{{.BIN_DIR}}/pipeplot"
+    status:
+      - command -v pipeplot
 
   plotext:
     desc: >
@@ -87,7 +103,11 @@ tasks:
       Doesn't seem to have a CLI.
 
       [plotext](https://github.com/piccolomo/plotext)
-    cmd: python3 -m pip install --user --upgrade plotext
+    cmd: uv pip install --upgrade plotext
+    generates:
+      - "{{.BIN_DIR}}/plotext"
+    status:
+      - command -v plotext
 
   plotille:
     desc: >
@@ -106,7 +126,9 @@ tasks:
       Library Only?
 
       [Plotille](https://github.com/tammoippen/plotille)
-    cmd: python3 -m pip install --user --upgrade plotille
+    cmd: uv pip install --upgrade plotille
+    status:
+      - python -c 'import plotille'
 
   pysparklines:
     desc: >
@@ -115,7 +137,11 @@ tasks:
       Takes series data via stdin, command line, or API and prints a sparkline representation.
 
       [pysparkline](https://github.com/RedKrieg/pysparklines)
-    cmd: python3 -m pip install --user --upgrade pysparklines
+    cmd: uv pip install --upgrade pysparklines
+    generates:
+      - "{{.BIN_DIR}}/pysparklines"
+    status:
+      - command -v pysparklines
 
   smag:
     desc: >
@@ -127,6 +153,10 @@ tasks:
 
       [smag - show me a graph!](https://github.com/aantn/smag)
     cmd: cargo install --force --git https://github.com/aantn/smag
+    generates:
+      - "{{.BIN_DIR}}/smag"
+    status:
+      - command -v smag
 
   termeter:
     desc: >
@@ -136,6 +166,10 @@ tasks:
 
       [termeter](https://github.com/atsaki/termeter)
     cmd: go install github.com/atsaki/termeter/cmd/termeter@latest
+    generates:
+      - "{{.BIN_DIR}}/termeter"
+    status:
+      - command -v termeter
 
   termgraph:
     desc: >
@@ -145,7 +179,11 @@ tasks:
 
       [Termgraph](https://github.com/mkaz/termgraph)
       [Termgraph – How To Draw basic graphs on Linux terminal - Blog](https://computingforgeeks.com/termgraph-command-line-tool-draw-graphs-in-terminal-linux/)
-    cmd: python3 -m pip install --user --upgrade termgraph
+    cmd: uv pip install --upgrade termgraph
+    generates:
+      - "{{.BIN_DIR}}/termgraph"
+    status:
+      - command -v termgraph
 
   termplotlib:
     desc: >
@@ -156,7 +194,9 @@ tasks:
       aims to work like matplotlib.
 
       [termplotlib](https://github.com/nschloe/termplotlib)
-    cmd: python3 -m pip install --user --upgrade termplotlib
+    cmd: uv pip install --upgrade termplotlib
+    status:
+      - python -c 'import termplotlib'
 
   ttyplot:
     desc: >
@@ -168,3 +208,7 @@ tasks:
 
       [ttyplot](https://github.com/tenox7/ttyplot)
     cmd: echo "Needs to be compiled"
+    generates:
+      - "{{.BIN_DIR}}/ttyplot"
+    status:
+      - command -v ttyplot
