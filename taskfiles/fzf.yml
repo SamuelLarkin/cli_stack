@@ -2,7 +2,6 @@ version: "3"
 
 env:
   BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
-  BASH_RC_D: "{{.HOME}}/.bashrc.d"
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
 
@@ -65,12 +64,12 @@ tasks:
     cmd: |
       curl \
          --create-dirs --fail --location \
-         --output {{.BASH_RC_D}}/'#1' \
+         --output {{.BASH_COMPLETION_D}}/'#1' \
          'https://raw.githubusercontent.com/junegunn/fzf-git.sh/main/{fzf-git}.sh'
     generates:
-      - "{{.BASH_RC_D}}/fzf-git"
+      - "{{.BASH_COMPLETION_D}}/fzf-git"
     status:
-      - test -f {{.BASH_RC_D}}/fzf-git
+      - test -f {{.BASH_COMPLETION_D}}/fzf-git
 
   fzf-tmux:
     desc: >
