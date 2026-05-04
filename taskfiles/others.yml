@@ -2,7 +2,6 @@ version: "3"
 
 env:
   BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
-  BASH_RC_D: "{{.HOME}}/.bashrc.d"
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
 
