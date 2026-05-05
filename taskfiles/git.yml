@@ -9,8 +9,8 @@ tasks:
   default:
     deps:
       - git-filter-repo
-      - git_completion
       - git_prompt
+      - completion
 
   git-filter-repo:
     desc: >
@@ -31,7 +31,7 @@ tasks:
     status:
       - command -v git-filter-repo
 
-  git_completion:
+  completion:
     desc: >
       Git's CLI completion
     summary: |
