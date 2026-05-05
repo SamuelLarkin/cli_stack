@@ -8,10 +8,10 @@ env:
 tasks:
   default:
     deps:
-      - shell_completion
+      - completion
       - vim_syntax
 
-  shell_completion:
+  completion:
     desc: >
       SLURM's bash shell completion.
     summary: |
