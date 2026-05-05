@@ -9,7 +9,6 @@ tasks:
   default:
     deps:
       - git-filter-repo
-      - git_prompt
       - completion
 
   git-filter-repo:
@@ -48,7 +47,7 @@ tasks:
     status:
       - test -s "{{.BASH_COMPLETION_D}}/git"
 
-  git_prompt:
+  prompt:
     desc: >
       Git's prompt. Are we actually using this or starship completely replaces this?
     summary: |
