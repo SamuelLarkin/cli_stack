@@ -13,7 +13,7 @@ tasks:
     deps:
       - install_plugins
       - plugin_manager
-      - shell_completion
+      - completion
 
   install_plugins:
     desc: >
@@ -42,7 +42,7 @@ tasks:
     status:
       - test -d {{.HOME}}/.tmux/plugins/tpm
 
-  shell_completion:
+  completion:
     desc: >
       Install tmux shell completion.
     summary: |
