@@ -177,7 +177,7 @@ tasks:
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2"
+          "$LATEST_VERSION_URL"
       - defer: rm $TARBALL
       - mkdir -p parallel
       - defer: rm -fr parallel
@@ -188,6 +188,7 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_VERSION_URL: https://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
       TARBALL: parallel.tar.bz2
     generates:
       - "{{.BIN_DIR}}/parallel"
