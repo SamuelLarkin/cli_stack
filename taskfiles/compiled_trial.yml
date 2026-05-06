@@ -98,10 +98,11 @@ tasks:
       [jo](https://github.com/jpmens/jo)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq -r '.tarball_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/jpmens/jo/releases/download/$VERSION/jo-$VERSION.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p jo
       - defer: rm -fr jo
@@ -114,8 +115,8 @@ tasks:
         \make DESTDIR="{{.INSTALL_DIR}}" install
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/jpmens/jo/releases/latest
       TARBALL: jo.tar.gz
-      VERSION: 1.9
     generates:
       - "{{.BIN_DIR}}/jo"
     status:
