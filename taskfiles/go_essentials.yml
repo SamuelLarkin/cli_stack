@@ -92,10 +92,11 @@ tasks:
     #cmd: go install github.com/johnkerl/miller/cmd/mlr@latest
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.name | contains(-linux-amd64.tar.gz")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "$(curl -s https://api.github.com/repos/johnkerl/miller/releases/latest | jq --raw-output '.assets[] | select(.name | contains("-linux-amd64.tar.gz")) | .browser_download_url')"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p miller
       - defer: rm -fr miller
@@ -103,6 +104,7 @@ tasks:
       - install --mode=500 --target-directory="{{.GOBIN}}" miller/mlr
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/johnkerl/miller/releases/latest
       TARBALL: miller.tar.gz
     generates:
       - "{{.GOBIN}}/mlr"
