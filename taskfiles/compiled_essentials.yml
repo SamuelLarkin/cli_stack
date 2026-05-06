@@ -113,10 +113,11 @@ tasks:
       [jq - doc](https://github.com/stedolan/jq)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.tarball_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/jqlang/jq/releases/download/jq-$VERSION/jq-$VERSION.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p jq-build
       - defer: rm -fr jq-build
@@ -129,8 +130,8 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/jqlang/jq/releases/latest
       TARBALL: jq.tar.gz
-      VERSION: 1.7
     generates:
       - "{{.BIN_DIR}}/jq"
     status:
