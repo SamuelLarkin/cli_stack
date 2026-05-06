@@ -208,10 +208,11 @@ tasks:
       [vifm](https://github.com/vifm/vifm)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq -r '.tarball_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/vifm/vifm/archive/refs/tags/v$VERSION.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p vifm
       - defer: rm -fr vifm
@@ -222,8 +223,8 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/vifm/vifm/releases/latest
       TARBALL: vifm.tar.gz
-      VERSION: 0.12
     generates:
       - "{{.BIN_DIR}}/vifm"
     status:
