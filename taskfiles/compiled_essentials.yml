@@ -207,10 +207,11 @@ tasks:
       [tig](https://github.com/jonas/tig)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.tarball_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/jonas/tig/releases/download/tig-$VERSION/tig-$VERSION.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p tig
       - defer: rm -fr tig
@@ -232,6 +233,7 @@ tasks:
           'https://raw.githubusercontent.com/h3xx/tig-colors-neonwolf/main/{tig-colors-neonwolf-256.tigrc}'
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/jonas/tig/releases/latest
       TARBALL: tig.tar.gz
       CONFIG_DIR: "{{.HOME}}/.config/tig"
       VERSION: 2.6.0
