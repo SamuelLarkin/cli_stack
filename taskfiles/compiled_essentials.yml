@@ -254,10 +254,11 @@ tasks:
       [ug/ugrep](https://github.com/Genivia/ugrep)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.tarball_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/Genivia/ugrep/archive/refs/tags/v$VERSION.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p ugrep
       - defer: rm -fr ugrep
@@ -268,8 +269,8 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/Genivia/ugrep/releases/latest
       TARBALL: ugrep.tar.gz
-      VERSION: 7.5.0
     generates:
       - "{{.BIN_DIR}}/ugrep"
     status:
