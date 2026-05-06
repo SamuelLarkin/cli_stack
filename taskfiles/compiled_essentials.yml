@@ -63,19 +63,21 @@ tasks:
       NOTE: probably already install by `cargo install hyperfine`.
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.browser_download_url | endswith("x86_64-unknown-linux-musl.tar.gz")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/sharkdp/hyperfine/releases/download/v$VERSION/hyperfine-v$VERSION-x86_64-unknown-linux-musl.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p hyperfine
       - defer: rm -fr hyperfine
       - tar xf $TARBALL --directory=hyperfine --strip-components=1
       - cp hyperfine/hyperfine "{{.BIN_DIR}}"
+      - install --mode=u=rx hyperfine/hyperfine "{{.BIN_DIR}}"
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/sharkdp/hyperfine/releases/latest
       TARBALL: hyperfine.tar.gz
-      VERSION: 1.19.0
     generates:
       - "{{.BIN_DIR}}/hyperfine"
     status:
