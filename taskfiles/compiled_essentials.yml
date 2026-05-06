@@ -25,11 +25,14 @@ tasks:
       [htop](https://github.com/htop-dev/htop)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.browser_download_url | endswith(".tar.xz")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/htop-dev/htop/releases/download/$VERSION/htop-$VERSION.tar.xz"
+          "$latest_version_url"
       - defer: rm $TARBALL
+      - mkdir -p htop
+      - defer: rm -fr htop
       - tar xf $TARBALL --directory=htop --strip-components=1
       - defer: rm -fr htop
       - |
@@ -39,8 +42,8 @@ tasks:
         \make -j $(nproc) install
     dir: $HOME/tmp
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/htop-dev/htop/releases/latest
       TARBALL: htop.tar.xz
-      VERSION: 3.4.1
     generates:
       - "{{.BIN_DIR}}/htop"
     status:
