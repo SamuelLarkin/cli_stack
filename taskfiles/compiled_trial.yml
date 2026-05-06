@@ -151,11 +151,14 @@ tasks:
       [neovim](https://github.com/neovim/neovim)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.browser_download_url | endswith("linux-x86_64.appimage")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
           --output "{{.BIN_DIR}}/nvim" \
-          "https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage"
+          "$latest_version_url"
       - chmod u+x "{{.BIN_DIR}}/nvim"
+    env:
+      LATEST_INFO_URL: https://api.github.com/repos/neovim/neovim/releases/latest
     generates:
       - "{{.BIN_DIR}}/nvim"
     status:
