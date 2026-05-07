@@ -64,7 +64,7 @@ tasks:
     dir: "{{.HOME}}/tmp"
     env:
       TARBALL: ncurses.tar.gz
-      VERSION: 6.5
+      VERSION: 6.6
     preconditions:
       - msg: "make must be in your $PATH"
         sh: command -v make
