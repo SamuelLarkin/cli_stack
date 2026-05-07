@@ -8,11 +8,12 @@ env:
 tasks:
   default:
     deps:
+      # - completion # NOTE: done with `eval "$(fzf --bash)"`.
       - forgit
       - fzf
       - fzf-git
       - fzf-tmux
-      #- tmux-fzf
+      #- tmux-fzf # NOTE: This plugin is intalled in `.tmux.conf` with `set -g @plugin 'sainnhe/tmux-fzf'`.
 
   forgit:
     desc: >
