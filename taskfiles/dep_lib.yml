@@ -21,10 +21,11 @@ tasks:
       [libevent](https://libevent.org/)
     cmds:
       - |
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq -r '.tarball_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
-          "https://github.com/libevent/libevent/releases/download/release-$VERSION/libevent-$VERSION.tar.gz"
+          "$latest_version_url"
       - defer: rm $TARBALL
       - mkdir -p libevent
       - defer: rm -fr libevent
@@ -35,8 +36,8 @@ tasks:
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
     env:
+      LATEST_INFO_URL: https://api.github.com/repos/libevent/libevent/releases/latest
       TARBALL: libevent.tar.gz
-      VERSION: 2.1.12-stable
     preconditions:
       - msg: "make must be in your $PATH"
         sh: command -v make
