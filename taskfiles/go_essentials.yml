@@ -92,7 +92,7 @@ tasks:
     #cmd: go install github.com/johnkerl/miller/cmd/mlr@latest
     cmds:
       - |
-        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.name | contains(-linux-amd64.tar.gz")) | .browser_download_url')
+        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.name | contains("-linux-amd64.tar.gz")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
           --output $TARBALL \
