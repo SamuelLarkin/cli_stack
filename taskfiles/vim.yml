@@ -56,11 +56,16 @@ tasks:
       [vim as AppImage](https://github.com/vim/vim-appimage)
     cmds:
       - |
+        latest_version_url=$(curl -s 'https://api.github.com/repos/vim/vim-appimage/releases/latest' | jq --raw-output '.assets[] | select(.browser_download_url | endswith(".AppImage")) | .browser_download_url | select(contains("/Vim"))')
         curl \
           --create-dirs --fail --location \
-          --output {{.BIN_DIR}}/vim \
-          https://github.com/vim/vim-appimage/releases/download/v9.1.1301/Vim-v9.1.1301.glibc2.29-x86_64.AppImage
-      - chmod u+x {{.BIN_DIR}}/vim
+          --output $BINARY \
+          "$latest_version_url"
+      - chmod ug+x "$BINARY"
+    dir: "{{.HOME}}/tmp"
+    env:
+      LATEST_INFO_URL: https://api.github.com/repos/vim/vim-appimage/releases/latest
+      BINARY: "{{.BIN_DIR}}/vim"
     generates:
       - "{{.BIN_DIR}}/vim"
     status:
