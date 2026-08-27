@@ -27,6 +27,15 @@ export PATH=~/opt/go/bin:${PATH:+:$PATH}
 env GOBIN=$HOME/.local/bin go install github.com/go-task/task/v3/cmd/task@latest
 ```
 
+### Install to a Different Directory
+
+```sh
+task \
+  compiled_essentials:parallel \
+  INSTALL_DIR=/gpfs/projects/DT/mtp/corpora/HoC-Committees/crawled/tools \
+  --force
+```
+
 ### ChezMoi
 
 [ChezMoi - Documentation](https://www.chezmoi.io/)
