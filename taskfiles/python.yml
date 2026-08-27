@@ -211,7 +211,7 @@ tasks:
       - pyinstaller --onefile venv_visidata/bin/vd
       - defer: rm -fr dist
       - install dist/vd "{{.BIN_DIR}}"
-    dir: $HOME/tmp
+    dir: "{{.HOME}}/tmp"
     generates:
       - "{{.BIN_DIR}}/vd"
     status:

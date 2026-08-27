@@ -28,7 +28,7 @@ tasks:
         "https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tar.zst"
       - defer: rm $TARBALL
       - tar xf $TARBALL --directory={{.INSTALL_DIR}}
-    dir: $HOME/tmp
+    dir: "{{.HOME}}/tmp"
     env:
       TARBALL: oLLaMa.tar.zst
     generates:
@@ -58,7 +58,7 @@ tasks:
       - defer: rm changelog install.sh readme.txt
       - chmod u+x xidel
       - mv xidel "{{.BIN_DIR}}"
-    dir: $HOME/tmp
+    dir: "{{.HOME}}/tmp"
     env:
       TARBALL: xidel.linux64.tar.gz
       VERSION: 0.9.8
