@@ -1,6 +1,6 @@
 version: "3"
 
-env:
+vars:
   BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
   BIN_DIR: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
@@ -25,24 +25,25 @@ tasks:
       [htop](https://github.com/htop-dev/htop)
     cmds:
       - |
-        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.browser_download_url | endswith(".tar.xz")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
-          --output $TARBALL \
-          "$latest_version_url"
-      - defer: rm $TARBALL
+          --output {{.TARBALL}} \
+          "{{.LATEST_VERSION_URL}}"
+      - defer: rm {{.TARBALL}}
       - mkdir -p htop
       - defer: rm -fr htop
-      - tar xf $TARBALL --directory=htop --strip-components=1
+      - tar xf {{.TARBALL}} --directory=htop --strip-components=1
       - defer: rm -fr htop
       - |
         cd htop
         ./autogen.sh
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc) install
-    dir: $HOME/tmp
-    env:
+    dir: "{{.HOME}}/tmp"
+    vars:
       LATEST_INFO_URL: https://api.github.com/repos/htop-dev/htop/releases/latest
+      LATEST_VERSION_URL:
+        sh: curl -s {{.LATEST_INFO_URL}} | jq --raw-output '.assets[] | select(.browser_download_url | endswith(".tar.xz")) | .browser_download_url'
       TARBALL: htop.tar.xz
     generates:
       - "{{.BIN_DIR}}/htop"
@@ -63,20 +64,21 @@ tasks:
       NOTE: probably already install by `cargo install hyperfine`.
     cmds:
       - |
-        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.assets[] | select(.browser_download_url | endswith("x86_64-unknown-linux-musl.tar.gz")) | .browser_download_url')
         curl \
           --create-dirs --fail --location \
-          --output $TARBALL \
-          "$latest_version_url"
-      - defer: rm $TARBALL
+          --output {{.TARBALL}} \
+          "{{.LATEST_VERSION_URL}}"
+      - defer: rm {{.TARBALL}}
       - mkdir -p hyperfine
       - defer: rm -fr hyperfine
-      - tar xf $TARBALL --directory=hyperfine --strip-components=1
+      - tar xf {{.TARBALL}} --directory=hyperfine --strip-components=1
       - cp hyperfine/hyperfine "{{.BIN_DIR}}"
       - install --mode=u=rx hyperfine/hyperfine "{{.BIN_DIR}}"
     dir: "{{.HOME}}/tmp"
-    env:
+    vars:
       LATEST_INFO_URL: https://api.github.com/repos/sharkdp/hyperfine/releases/latest
+      LATEST_VERSION_URL:
+        sh: curl -s {{.LATEST_INFO_URL}} | jq --raw-output '.assets[] | select(.browser_download_url | endswith("x86_64-unknown-linux-musl.tar.gz")) | .browser_download_url'
       TARBALL: hyperfine.tar.gz
     generates:
       - "{{.BIN_DIR}}/hyperfine"
@@ -96,8 +98,10 @@ tasks:
         curl \
           --create-dirs --fail --location \
           --output "{{.BIN_DIR}}/jq" \
-          "https://github.com/jqlang/jq/releases/latest/download/jq-linux-amd64"
+          "{{.LATEST_VERSION_URL}}"
       - chmod u+x "{{.BIN_DIR}}/jq"
+    vars:
+      LATEST_VERSION_URL: https://github.com/jqlang/jq/releases/latest/download/jq-linux-amd64
     generates:
       - "{{.BIN_DIR}}/jq"
     status:
@@ -113,15 +117,14 @@ tasks:
       [jq - doc](https://github.com/stedolan/jq)
     cmds:
       - |
-        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.tarball_url')
         curl \
           --create-dirs --fail --location \
-          --output $TARBALL \
-          "$latest_version_url"
-      - defer: rm $TARBALL
+          --output {{.TARBALL}} \
+          "{{.LATEST_VERSION_URL}}"
+      - defer: rm {{.TARBALL}}
       - mkdir -p jq-build
       - defer: rm -fr jq-build
-      - tar xf $TARBALL --directory=jq-build --strip-components=1
+      - tar xf {{.TARBALL}} --directory=jq-build --strip-components=1
       - |
         cd jq-build
         autoreconf -fi
@@ -129,8 +132,10 @@ tasks:
         \make -j $(nproc) LDFLAGS=-all-static
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
-    env:
+    vars:
       LATEST_INFO_URL: https://api.github.com/repos/jqlang/jq/releases/latest
+      LATEST_VERSION_URL:
+        sh: curl -s "{{.LATEST_INFO_URL}}" | jq --raw-output '.tarball_url'
       TARBALL: jq.tar.gz
     generates:
       - "{{.BIN_DIR}}/jq"
@@ -148,14 +153,14 @@ tasks:
 
       [neovim](https://github.com/neovim/neovim)
     cmds:
-      - git clone --branch $VERSION https://github.com/neovim/neovim.git
+      - git clone --branch {{.VERSION}} https://github.com/neovim/neovim.git
       - defer: rm -fr neovim
       - |
         cd neovim/
         \make CMAKE_BUILD_TYPE=Release
-        \make install CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX={{.INSTALL_DIR}}
+        \make install CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX="{{.INSTALL_DIR}}"
     dir: "{{.HOME}}/tmp"
-    env:
+    vars:
       VERSION: stable
     generates:
       - "{{.BIN_DIR}}/nvim"
@@ -176,18 +181,18 @@ tasks:
       - |
         curl \
           --create-dirs --fail --location \
-          --output $TARBALL \
-          "$LATEST_VERSION_URL"
-      - defer: rm $TARBALL
+          --output {{.TARBALL}} \
+          "{{.LATEST_VERSION_URL}}"
+      - defer: rm {{.TARBALL}}
       - mkdir -p parallel
       - defer: rm -fr parallel
-      - tar xf $TARBALL --directory=parallel --strip-components=1
+      - tar xf {{.TARBALL}} --directory=parallel --strip-components=1
       - |
         cd parallel
         ./configure --prefix="{{.INSTALL_DIR}}"
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
-    env:
+    vars:
       LATEST_VERSION_URL: https://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
       TARBALL: parallel.tar.bz2
     generates:
@@ -207,15 +212,14 @@ tasks:
       [tig](https://github.com/jonas/tig)
     cmds:
       - |
-        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.tarball_url')
         curl \
           --create-dirs --fail --location \
-          --output $TARBALL \
-          "$latest_version_url"
-      - defer: rm $TARBALL
+          --output {{.TARBALL}} \
+          "{{.LATEST_VERSION_URL}}"
+      - defer: rm {{.TARBALL}}
       - mkdir -p tig
       - defer: rm -fr tig
-      - tar xf $TARBALL --directory=tig --strip-components=1
+      - tar xf {{.TARBALL}} --directory=tig --strip-components=1
       - |
         cd tig
         ./autogen.sh
@@ -225,18 +229,19 @@ tasks:
         cp contrib/tig-completion.bash {{.BASH_COMPLETION_D}}/tig
         chmod a-x {{.BASH_COMPLETION_D}}/tig
         mkdir -p $CONFIG_DIR
-        cp contrib/chocolate.theme.tigrc $CONFIG_DIR
+        cp contrib/chocolate.theme.tigrc {{.CONFIG_DIR}}
       - |
         curl \
           --create-dirs --fail --location \
           --output $CONFIG_DIR/"#1" \
           'https://raw.githubusercontent.com/h3xx/tig-colors-neonwolf/main/{tig-colors-neonwolf-256.tigrc}'
     dir: "{{.HOME}}/tmp"
-    env:
-      LATEST_INFO_URL: https://api.github.com/repos/jonas/tig/releases/latest
-      TARBALL: tig.tar.gz
+    vars:
       CONFIG_DIR: "{{.HOME}}/.config/tig"
-      VERSION: 2.6.0
+      LATEST_INFO_URL: https://api.github.com/repos/jonas/tig/releases/latest
+      LATEST_VERSION_URL:
+        sh: curl -s "{{.LATEST_INFO_URL}}" | jq --raw-output '.tarball_url'
+      TARBALL: tig.tar.gz
     generates:
       - "{{.BIN_DIR}}/bin/tig"
     status:
@@ -254,22 +259,23 @@ tasks:
       [ug/ugrep](https://github.com/Genivia/ugrep)
     cmds:
       - |
-        latest_version_url=$(curl -s "$LATEST_INFO_URL" | jq --raw-output '.tarball_url')
         curl \
           --create-dirs --fail --location \
-          --output $TARBALL \
-          "$latest_version_url"
-      - defer: rm $TARBALL
+          --output {{.TARBALL}} \
+          "{{.LATEST_VERSION_URL}}"
+      - defer: rm {{.TARBALL}}
       - mkdir -p ugrep
       - defer: rm -fr ugrep
-      - tar xf $TARBALL --directory=ugrep --strip-components=1
+      - tar xf {{.TARBALL}} --directory=ugrep --strip-components=1
       - |
         cd ugrep
         ./configure --prefix="{{.INSTALL_DIR}}" --without-zstd
         \make -j $(nproc) install
     dir: "{{.HOME}}/tmp"
-    env:
+    vars:
       LATEST_INFO_URL: https://api.github.com/repos/Genivia/ugrep/releases/latest
+      LATEST_VERSION_URL:
+        sh: curl -s "{{.LATEST_INFO_URL}}" | jq --raw-output '.tarball_url'
       TARBALL: ugrep.tar.gz
     generates:
       - "{{.BIN_DIR}}/ugrep"
