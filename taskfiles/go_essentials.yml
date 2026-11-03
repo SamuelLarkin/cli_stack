@@ -134,3 +134,15 @@ tasks:
       - "{{.CONFIG_D}}/nvim/ftdetect/mlr.vim"
     status:
       - test -s "{{.CONFIG_D}}/nvim/ftdetect/mlr.vim"
+
+  miller-nvim-syntax:
+    cmd: curl --create-dirs --fail --location --output mlr.vim "$URL"
+    deps:
+      - miller
+    dir: "{{.CONFIG_D}}/nvim/syntax"
+    env:
+      URL: https://raw.githubusercontent.com/johnkerl/miller/refs/heads/main/vim/syntax/mlr.vim
+    generates:
+      - "{{.CONFIG_D}}/nvim/syntax/mlr.vim"
+    status:
+      - test -s "{{.CONFIG_D}}/nvim/syntax/mlr.vim"
