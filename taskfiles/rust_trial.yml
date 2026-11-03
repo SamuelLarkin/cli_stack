@@ -272,6 +272,22 @@ tasks:
       - msg: "cargo must be in your $PATH"
         sh: command -v cargo
 
+  parquet2json:
+    desc: >
+      A command-line tool for converting Parquet to newline-delimited JSON.
+    summary: |
+      A command-line tool for converting Parquet to newline-delimited JSON.
+
+      [parquet2json](https://github.com/jupiter/parquet2json)
+    cmd: cargo install --force --locked parquet2json
+    generates:
+      - "{{.BIN_DIR}}/parquet2json"
+    status:
+      - command -v parquet2json
+    preconditions:
+      - msg: "cargo must be in your $PATH"
+        sh: command -v cargo
+
   presenterm:
     desc: >
       A markdown terminal slideshow tool.
