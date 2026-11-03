@@ -4,6 +4,7 @@ env:
   # [The directory where go install and go get will place binaries after building main packages](https://www.programming-books.io/essential/go/gopath-goroot-gobin-d6da4b8481f94757bae43be1fdfa9e73#fcf0957a-4f5a-4f3e-870f-dd49aead22bd)
   GOBIN: "{{.HOME}}/.local/bin"
   BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
+  CONFIG_D: "{{.HOME}}/.config"
 
 tasks:
   default:
