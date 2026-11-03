@@ -327,7 +327,7 @@ tasks:
       A lightweight TUI application to view and query tabular data files, such as CSV, TSV, or parquet.
 
       [tabiew](https://github.com/shshemi/tabiew)
-    cmd: cargo install --force tabiew
+    cmd: cargo install --force --locked tabiew || echo 'curl -sS https://raw.githubusercontent.com/shshemi/tabiew/main/install.sh | sh'
     generates:
       - "{{.BIN_DIR}}/tw"
     status:
