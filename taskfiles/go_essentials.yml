@@ -122,3 +122,15 @@ tasks:
       - "{{.BASH_COMPLETION_D}}/miller"
     status:
       - test -s "{{.BASH_COMPLETION_D}}/miller"
+
+  miller-nvim-ftdetect:
+    cmd: curl --create-dirs --fail --location --output mlr.vim "$URL"
+    deps:
+      - miller
+    dir: "{{.CONFIG_D}}/nvim/ftdetect"
+    env:
+      URL: https://raw.githubusercontent.com/johnkerl/miller/refs/heads/main/vim/ftdetect/mlr.vim
+    generates:
+      - "{{.CONFIG_D}}/nvim/ftdetect/mlr.vim"
+    status:
+      - test -s "{{.CONFIG_D}}/nvim/ftdetect/mlr.vim"
