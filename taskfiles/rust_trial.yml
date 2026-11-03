@@ -258,9 +258,9 @@ tasks:
 
   jf:
     desc: >
-      jf %q "JSON Formatted".
+      `jf` %q "JSON Formatted".
     summary: |
-      jf %q "JSON Formatted".
+      `jf` is a `jo` alternative, A small utility to safely format and print JSON objects in the commandline.
 
       [jf](https://github.com/sayanarijit/jf)
     cmd: cargo install --force jf
