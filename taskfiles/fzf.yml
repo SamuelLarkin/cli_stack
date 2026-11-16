@@ -3,6 +3,7 @@ version: "3"
 env:
   BASH_COMPLETION_D: "{{.HOME}}/.local/share/bash-completion/completions"
   BIN_DIR: "{{.HOME}}/.local/bin"
+  GOBIN: "{{.HOME}}/.local/bin"
   INSTALL_DIR: "{{.HOME}}/.local"
 
 tasks:
